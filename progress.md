@@ -1,0 +1,1 @@
+1) first I want to connect the API  and play a little with it to see all the posibilities I have.
