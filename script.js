@@ -148,6 +148,8 @@ function loadAPokemon6(data){
 }
 
 
+
+
 loadRandomPokemon();
 loadRandomPokemon2();
 loadRandomPokemon3();
@@ -156,7 +158,18 @@ loadRandomPokemon5();
 loadRandomPokemon6();
 
 
+// Add class gradient -------------------------------------------
+//tipo de poke dentro de variable
+//
 
+
+
+const pokeCard = document.querySelectorAll(".pokemon-card");
+
+pokeCard.forEach(function (pokeCard){
+    pokeCard.classList.add("poison-background");//aca le pongo variable para que tome el typo y asigne el correspondiente background
+})
+// End of class gradient -------------------------------------------
 
 
 

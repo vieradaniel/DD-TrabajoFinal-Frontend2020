@@ -1,2 +1,3 @@
 1) First I want to connect the API  and play a little with it to see all the posibilities I have.
 2)20/5/2021 I was able to access the data from the API and store it in a variable (for later use) but I know it's not the way to do it. I'm repeating too much code... 
+3) Adding some css html to "choose your pokemon section"

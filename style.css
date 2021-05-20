@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+html body{
+
+    width:100;
+    height:100;
+    margin: 0;
+    padding:0;
+
+}
+.pokemon-logo-container{
+    display:flex;
+    justify-content:center;
+    margin-top:1rem;
+}
+.pokemon-logo{
+    width:12rem;
+}
+
+.selection-container{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+}
+.pokemon-card{
+    border: 1px solid black;
+    padding:1rem;
+    margin:1rem;
+    border-radius:10px;
+
+    
+}
+/*
+.pokemon-image{
+    width:100px;
+}
+.pokemon-image-container{
+    max-width: 200px;
+}
+*/
+img{
+    width:6rem;
+}
+/* Gradient background colors ----------------------------------*/
+.poison-background{
+    background: linear-gradient(180deg, #34B550 0%, #2A7318 100%);
+}
