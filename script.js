@@ -1,3 +1,53 @@
+
+
+//componente 1 collect pokemon info -----------------------------------
+class CollectPokemonInfo{
+    getData(){
+        return fetch('https://app.pokemon-api.xyz/pokemon/random')
+        .then((data) =>{
+            return data.json();
+        })
+        .then((json)=>{
+            
+            const pokemonRetorno = {
+                name : json.name.english,
+                id : json.id,
+                type : json.type
+            }    
+            return pokemonRetorno;
+        });
+    }
+}
+
+//component 2 do something with the pokemon info.----------------------
+class PokemonHandler{
+    constructor(pokeData){
+        this.pokeData = pokeData;
+    }
+
+    showData(){
+        const pokeName = document.querySelector(".test");
+        pokeName.innerHTML = this.pokeData.name;
+    }
+
+}
+
+// main script-------------------------------------
+const pokemon = new CollectPokemonInfo();
+//const pokemon1 = pokemon.getData().then(pokemon.id);
+
+pokemon.getData().then(pokeData =>{
+    const pokeHandler = new PokemonHandler(pokeData);
+    pokeHandler.showData();
+})
+
+
+
+
+
+
+/*
+
 //pokemon 1-----------------------------------------------------
 var pokemon1;
 function loadRandomPokemon(){
