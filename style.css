@@ -9,14 +9,7 @@ html body{
     padding:0;
 
 }
-.pokemon-logo-container{
-    display:flex;
-    justify-content:center;
-    margin-top:1rem;
-}
-.pokemon-logo{
-    width:12rem;
-}
+
 
 .selection-container{
     display:flex;

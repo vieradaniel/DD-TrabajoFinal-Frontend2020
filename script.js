@@ -1,3 +1,10 @@
+
+
+
+
+
+/*
+
 //componente 1 collect pokemon info -----------------------------------
 class CollectPokemonInfo{
     getData(){
