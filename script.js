@@ -1,5 +1,3 @@
-
-
 //componente 1 collect pokemon info -----------------------------------
 class CollectPokemonInfo{
     getData(){
@@ -29,17 +27,29 @@ class PokemonHandler{
         const pokeName = document.querySelector(".test");
         pokeName.innerHTML = this.pokeData.name;
     }
-
 }
 
 // main script-------------------------------------
-const pokemon = new CollectPokemonInfo();
+const pokemon1 = new CollectPokemonInfo();
 //const pokemon1 = pokemon.getData().then(pokemon.id);
 
-pokemon.getData().then(pokeData =>{
+pokemon1.getData().then(pokeData =>{
     const pokeHandler = new PokemonHandler(pokeData);
     pokeHandler.showData();
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
