@@ -1,5 +1,14 @@
 
 
+fetch('https://app.pokemon-api.xyz/pokemon/random')
+        .then((data) =>{
+            return data.json();
+        })
+        .then((json)=>{
+            
+          console.log(json);
+        });
+
 
 
 
