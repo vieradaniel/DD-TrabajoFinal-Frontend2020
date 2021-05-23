@@ -20,7 +20,13 @@ template.innerHTML =
     display:flex;
     flex-direction:column;
     align-items:center;
+    animation: fadeIn 1.5s;
     
+}
+
+@keyframes fadeIn{
+    0% {opacity:0;}
+    100% {opacity:1}
 }
 </style>
 

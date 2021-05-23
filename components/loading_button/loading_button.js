@@ -13,6 +13,7 @@ templateButton.innerHTML=
         justify-content:center;
         align-items:center;
         animation: loading-bar-spinner 1.5s ease ;
+        
     }
     .loading-word{
         font-family: acumin-pro-extra-condensed;
@@ -24,11 +25,15 @@ templateButton.innerHTML=
     @keyframes loading-bar-spinner{
         from {
             transform:rotate(0turn);
+            
         }
         to{
             transform:rotate(1turn);
+           
         }
     }
+
+    
 
 </style>
 
