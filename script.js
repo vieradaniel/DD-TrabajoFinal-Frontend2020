@@ -1,13 +1,20 @@
 
 
-fetch('https://app.pokemon-api.xyz/pokemon/random')
+const pokemon= fetch('https://app.pokemon-api.xyz/pokemon/random')
         .then((data) =>{
             return data.json();
         })
         .then((json)=>{
-            
-          console.log(json);
+          
+          return json;  
+          
         });
+
+
+pokemon.then(json=>{
+    console.log(json.name.english)
+})
+
 
 
 

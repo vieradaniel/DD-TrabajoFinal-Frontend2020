@@ -4,6 +4,7 @@ html body{
     margin: 0;
     padding:0; 
     
+    
 
 }
 
@@ -17,6 +18,7 @@ html body{
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    display:none;
     
     
    
@@ -25,4 +27,30 @@ html body{
 .poke-logo{
     margin-bottom:1rem;
 }
+.character-selection{
+    background:linear-gradient(0deg, rgba(196, 196, 196, 0) 90.77%, #FFCB05 99.23%);
 
+    padding:0.5rem;
+}
+.choose-your-pokemon{
+    font-family: acumin-pro-extra-condensed;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2rem;
+    color: #3663AD;
+    text-align:center;
+    margin-bottom:1rem;
+    margin-top:-1.5rem;
+}
+
+.pokemon-card-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:3rem;
+    padding-top:0; 
+   
+}
+.pokemon-card{
+    margin-bottom:1rem;
+}
