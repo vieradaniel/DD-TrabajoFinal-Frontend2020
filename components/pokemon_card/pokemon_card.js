@@ -54,7 +54,7 @@ templateCard.innerHTML=`
     <div class="poke-card-body">
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif" alt="pokemon-picture">
     </div>
-    <div class="poke-card-bottom">
+    <div class="poke-card-bottom" name="poke">
     PIKACHU
     </div>
 </div>
@@ -65,11 +65,19 @@ templateCard.innerHTML=`
 class PokemonCard extends HTMLElement{
     constructor(){
         super();
-
+       
         this.attachShadow({mode:'open'});
-        this.shadowRoot.appendChild(templateCard.content.cloneNode(true));
-
+        this.shadowRoot.appendChild(templateCard.content.cloneNode(true)); 
+       
     }
+    connectedCallback(){
+         
+       const pokeName = this.shadowRoot.querySelector('.poke-card-bottom').innerHTML="pika";    
+        
+    }
+
+  
+
 }
 
 window.customElements.define('pokemon-card', PokemonCard);
