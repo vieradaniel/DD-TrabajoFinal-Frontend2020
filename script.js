@@ -20,6 +20,20 @@ pokemon1.getData().then(pokeData =>{
     pokeCard.pokemonName=pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
     pokeCard.pokemonImage= pokeData.thumbnail;
     pokeCard.pokemonId= "#"+ pokeData.id;
+    pokeCard.pokemonType= findTheType();
+
+
+
+    function findTheType(){
+        const type= pokeData.type;
+        console.log(type)
+        const result= type[0].toString()
+        
+        console.log(result);
+    
+        const route = "static/"+ result +".png";
+        return route;
+    }
 })
 
 const pokemon2 = new CollectPokemonInfo();
@@ -29,23 +43,20 @@ pokemon2.getData().then(pokeData =>{
     pokeCard.pokemonName=pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
     pokeCard.pokemonImage= pokeData.thumbnail;
     pokeCard.pokemonId= "#"+ pokeData.id;
-    //start of test (this should be in a function)
-    const type= pokeData.type;
-    console.log(type)
-    const result= type[0].toString()
-    
-    console.log(result);
+    pokeCard.pokemonType= findTheType();
 
-    const route = "static/"+ result +".png";
-    //end of test
-    pokeCard.pokemonType= route;
-    //test ---
-    
 
-    //la ruta que le quiero pasar tiene que ser:
-    //e.g:
-    //    static/Electric.png
-    //end of test---
+    
+    function findTheType(){
+        const type= pokeData.type;
+        console.log(type)
+        const result= type[0].toString()
+        
+        console.log(result);
+    
+        const route = "static/"+ result +".png";
+        return route;
+    }
 
 })
 /*
