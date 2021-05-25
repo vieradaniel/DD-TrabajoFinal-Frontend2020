@@ -6,7 +6,7 @@ class CollectPokemonInfo{
         })
         .then((json)=>{
 
-            return json.name.english;
+            return json;
 
         });
     }
@@ -17,12 +17,20 @@ class CollectPokemonInfo{
 const pokemon1 = new CollectPokemonInfo();
 
 pokemon1.getData().then(pokeData =>{
-    const pokeCard = document.querySelector('pokemon-card');
-    pokeCard.pokemonName=pokeData;
+    const pokeCard = document.querySelector('#poke1');
+    pokeCard.pokemonName=pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
+    pokeCard.pokemonImage= pokeData.thumbnail;
+})
+
+const pokemon2 = new CollectPokemonInfo();
+
+pokemon2.getData().then(pokeData =>{
+    const pokeCard = document.querySelector('#poke2');
+    pokeCard.pokemonName=pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
 })
 
 
-// does it mean that I can access the function get pokemonName? from outside of the component?
+
 
 
 

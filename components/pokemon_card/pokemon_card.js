@@ -35,12 +35,14 @@ templateCard.innerHTML=`
     padding-right:0.5rem; 
 }
 .poke-card-body{
-    display:flex;
-    justify-content:center;
+    display:block;
+    margin-left:20px;
+    width: 4rem;
 }
 .poke-card-body img{
-    width:3.5rem
+    width:100%; 
 }
+
 .poke-card-bottom{
     padding:0.3rem 0.5rem;
 }
@@ -52,7 +54,7 @@ templateCard.innerHTML=`
         <div class="pokemon-number">#025</div>
     </div>
     <div class="poke-card-body">
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif" alt="pokemon-picture">
+        <img id="pokePicture" src=""alt="pokemon-picture">            
     </div>
     <div class="poke-card-bottom" >
     PIKACHU
@@ -77,11 +79,17 @@ class PokemonCard extends HTMLElement{
     set pokemonName(newPokeName){
         this.shadowRoot.querySelector('.poke-card-bottom').innerHTML = newPokeName;
     }
+    get pokemonImage(){
+        return this.shadowRoot.querySelector('#pokePicture').src;
+    }
+    set pokemonImage(newPokeImage){
+        this.shadowRoot.querySelector('#pokePicture').src = newPokeImage;
+    }
 
     connectedCallback(){
          
        this.pokemonName= this.getAttribute("pokemonName");  //sth is not right, even though I change "pokemonName" to anything, it still works.
-        
+       this.pokemonImage = this.getAttribute("pokemonImage"); 
     }
 
   
