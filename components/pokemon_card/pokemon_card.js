@@ -56,7 +56,7 @@ templateCard.innerHTML=`
     <div class="poke-card-body">
         <img id="pokePicture" src=""alt="pokemon-picture">            
     </div>
-    <div class="poke-card-bottom" >
+    <div class="poke-card-bottom">
     PIKACHU
     </div>
 </div>
@@ -85,11 +85,18 @@ class PokemonCard extends HTMLElement{
     set pokemonImage(newPokeImage){
         this.shadowRoot.querySelector('#pokePicture').src = newPokeImage;
     }
+    get pokemonId(){
+        return this.shadowRoot.querySelector('.pokemon-number').innerHTML;
+    }
+    set pokemonId(newPokeId){
+        this.shadowRoot.querySelector('.pokemon-number').innerHTML = newPokeId;
+    }
 
     connectedCallback(){
          
        this.pokemonName= this.getAttribute("pokemonName");  //sth is not right, even though I change "pokemonName" to anything, it still works.
        this.pokemonImage = this.getAttribute("pokemonImage"); 
+       this.pokemonId = this.getAttribute("pokemonId");
     }
 
   
