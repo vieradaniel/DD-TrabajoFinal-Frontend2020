@@ -21,9 +21,56 @@ pokemon1.getData().then(pokeData =>{
     pokeCard.pokemonImage= pokeData.thumbnail;
     pokeCard.pokemonId= "#"+ pokeData.id;
     pokeCard.pokemonType= findTheType();
+    pokeCard.pokemonBackground= findTheBackground();
+
+//test
+function findTheBackground(){
+    let final=0;
+    const background = pokeData.type;
+    const backgroundResult = background[0].toString();
+    if(backgroundResult === 'Electric'){
+        final = 'linear-gradient(180deg, #F6BD20 0%, #FFFFFF 55.73%, #FFDE52 100%)';
+    }else if (backgroundResult === 'Fire'){
+        final = 'linear-gradient(180deg, #CF2828 0%, #FFDE52 100%)'
+    }else if (backgroundResult === 'Water'){
+        final ='linear-gradient(180deg, #3CC7DA 0%, #186B85 100%)'
+    }else if (backgroundResult === 'Ice'){
+        final = 'linear-gradient(180deg, #FFFFFF 0%, #C5DBFF 55.73%, #E2E9F5 100%)'
+    }else if (backgroundResult === 'Poison'){
+        final = 'linear-gradient(180deg, #34B550 0%, #2A7318 100%)'
+    }else if (backgroundResult === 'Bug'){
+        final = 'linear-gradient(180deg, #34B550 0%, #BEFFAD 100%)'
+        
+    }else if (backgroundResult === 'Grass'){
+        final = 'linear-gradient(180deg, #34B550 0%, #BEFFAD 100%)'
+    }
+    return final;
+}
+
+//
 
 
+    
+    //test
+    
+    
+   
+   
+    
+    
+    
+    
+    //end of test
+    /*
+    pokeCard.pokemonBackground= Electric ;
 
+    function findTheBackground(){
+        const background = pokeData.type;
+        const backgroundResult = type[0].toString();
+        const Electric = 'linear-gradient(180deg, #F6BD20 0%, #FFFFFF 55.73%, #FFDE52 100%)'
+        return Electric;
+    }
+*/
     function findTheType(){
         const type= pokeData.type;
         console.log(type)
@@ -44,6 +91,7 @@ pokemon2.getData().then(pokeData =>{
     pokeCard.pokemonImage= pokeData.thumbnail;
     pokeCard.pokemonId= "#"+ pokeData.id;
     pokeCard.pokemonType= findTheType();
+    pokeCard.PokemonBackground = "red";
 
 
     
@@ -57,6 +105,8 @@ pokemon2.getData().then(pokeData =>{
         const route = "static/"+ result +".png";
         return route;
     }
+    
+
 
 })
 /*

@@ -1,5 +1,6 @@
 const templateCard = document.createElement('template');
 templateCard.innerHTML=`
+
 <style>
 .poke-card-container{
     font-family: acumin-pro-extra-condensed;
@@ -13,7 +14,7 @@ templateCard.innerHTML=`
     flex-direction: column; 
     justify-content:space-between;
     padding:0.05rem;
-    background: linear-gradient(180deg, #F6BD20 0%, #FFFFFF 55.73%, #FFDE52 100%);
+    
 
 }
 .poke-card-top{
@@ -97,6 +98,13 @@ class PokemonCard extends HTMLElement{
     set pokemonType(newPokeType){
         this.shadowRoot.querySelector('#pokeType').src = newPokeType;
     }
+    
+    get pokemonBackground(){
+        return this.shadowRoot.querySelector('.poke-card-container').style.background;
+    }
+    set pokemonBackground(newPokeBackground){
+        this.shadowRoot.querySelector('.poke-card-container').style.background = newPokeBackground;
+    }
 
     connectedCallback(){
          
@@ -104,6 +112,9 @@ class PokemonCard extends HTMLElement{
        this.pokemonImage = this.getAttribute("pokemonImage"); 
        this.pokemonId = this.getAttribute("pokemonId");
        this.pokemonType = this.getAttribute("pokemonType");
+       this.pokemonBackground = this.getAttribute("pokemonBackground");
+       //console.log(this.shadowRoot.querySelector('.poke-card-container').style.background="red");
+      
     }
 
   
