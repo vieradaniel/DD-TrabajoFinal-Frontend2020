@@ -54,7 +54,7 @@ templateCard.innerHTML=`
     <div class="poke-card-body">
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif" alt="pokemon-picture">
     </div>
-    <div class="poke-card-bottom" name="poke">
+    <div class="poke-card-bottom" >
     PIKACHU
     </div>
 </div>
@@ -70,9 +70,17 @@ class PokemonCard extends HTMLElement{
         this.shadowRoot.appendChild(templateCard.content.cloneNode(true)); 
        
     }
+    
+    get pokemonName(){
+        return this.shadowRoot.querySelector('.poke-card-bottom').innerHTML;
+    }
+    set pokemonName(newPokeName){
+        this.shadowRoot.querySelector('.poke-card-bottom').innerHTML = newPokeName;
+    }
+
     connectedCallback(){
          
-       const pokeName = this.shadowRoot.querySelector('.poke-card-bottom').innerHTML="pika";    
+       this.pokemonName= this.getAttribute("pokemonName");  //sth is not right, even though I change "pokemonName" to anything, it still works.
         
     }
 

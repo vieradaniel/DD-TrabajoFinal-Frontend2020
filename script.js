@@ -1,5 +1,38 @@
+class CollectPokemonInfo{
+    getData(){
+        return fetch('https://app.pokemon-api.xyz/pokemon/random')
+        .then((data) =>{
+            return data.json();
+        })
+        .then((json)=>{
+
+            return json.name.english;
+
+        });
+    }
+}
 
 
+// main script-------------------------------------
+const pokemon1 = new CollectPokemonInfo();
+
+pokemon1.getData().then(pokeData =>{
+    const pokeCard = document.querySelector('pokemon-card');
+    pokeCard.pokemonName=pokeData;
+})
+
+
+// does it mean that I can access the function get pokemonName? from outside of the component?
+
+
+
+
+
+
+
+
+//testing
+/*
 const pokemon= fetch('https://app.pokemon-api.xyz/pokemon/random')
         .then((data) =>{
             return data.json();
@@ -14,8 +47,8 @@ const pokemon= fetch('https://app.pokemon-api.xyz/pokemon/random')
 pokemon.then(json=>{
     console.log(json.name.english)
 })
-
-
+*/
+//testing
 
 
 
