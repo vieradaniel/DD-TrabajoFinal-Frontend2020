@@ -29,8 +29,36 @@ pokemon2.getData().then(pokeData =>{
     pokeCard.pokemonName=pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
     pokeCard.pokemonImage= pokeData.thumbnail;
     pokeCard.pokemonId= "#"+ pokeData.id;
-})
+    //start of test (this should be in a function)
+    const type= pokeData.type;
+    console.log(type)
+    const result= type[0].toString()
+    
+    console.log(result);
 
+    const route = "static/"+ result +".png";
+    //end of test
+    pokeCard.pokemonType= route;
+    //test ---
+    
+
+    //la ruta que le quiero pasar tiene que ser:
+    //e.g:
+    //    static/Electric.png
+    //end of test---
+
+})
+/*
+function pokemonType(){
+    //agarrar el dato string
+    const pokeType= pokeData.type;
+    // comparar el dato string con las variables de direcciones que pongo
+    const lista= ['Fire'];
+    //si la lista tiene alguno de esos datos, retornar el que encuentra
+    lista.includes(pokeType)
+    return pokeType;
+}
+*/
 
 
 
