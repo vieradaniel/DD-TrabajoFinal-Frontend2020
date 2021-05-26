@@ -97,7 +97,7 @@ templateProfile.innerHTML=`
     </div>
 
     <div class="poke-picture">
-        <img src="https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/thumbnails/197.png">
+        <img id="pokePicture" src="https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/thumbnails/197.png">
     </div>
 
     <div class="profile-bottom">        
@@ -127,6 +127,41 @@ class ProfileCard extends HTMLElement{
         this.shadowRoot.appendChild(templateProfile.content.cloneNode(true));
     }
 
+    get pokemonName(){
+        return this.shadowRoot.querySelector('.pokemon-name').innerHTML;
+    }
+    set pokemonName(newPokeName){
+        this.shadowRoot.querySelector('.pokemon-name').innerHTML = newPokeName;
+    }
+    get pokemonImage(){
+        return this.shadowRoot.querySelector('#pokePicture').src;
+    }
+    set pokemonImage(newPokeImage){
+        this.shadowRoot.querySelector('#pokePicture').src = newPokeImage;
+    }
+    get pokemonId(){
+        return this.shadowRoot.querySelector('.pokemon-number').innerHTML;
+    }
+    set pokemonId(newPokeId){
+        this.shadowRoot.querySelector('.pokemon-number').innerHTML = newPokeId;
+    }  
+    get pokemonBackground(){
+        return this.shadowRoot.querySelector('.profile-card-container').style.background;
+    }
+    set pokemonBackground(newPokeBackground){
+        this.shadowRoot.querySelector('.profile-card-container').style.background = newPokeBackground;
+    }
+
+    connectedCallback(){
+         
+       this.pokemonName= this.getAttribute("pokemonName");  //sth is not right, even though I change "pokemonName" to anything, it still works.
+       this.pokemonImage = this.getAttribute("pokemonImage"); 
+       this.pokemonId = this.getAttribute("pokemonId");
+       this.pokemonType = this.getAttribute("pokemonType");
+       this.pokemonBackground = this.getAttribute("pokemonBackground");
+       //console.log(this.shadowRoot.querySelector('.poke-card-container').style.background="red");
+      
+    }
 
 
 }

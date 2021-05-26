@@ -16,12 +16,26 @@ class CollectPokemonInfo{
 const pokemon1 = new CollectPokemonInfo();
 
 pokemon1.getData().then(pokeData =>{
-    const pokeCard = document.querySelector('#poke1');
-    pokeCard.pokemonName=pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
-    pokeCard.pokemonImage= pokeData.thumbnail;
-    pokeCard.pokemonId= "#"+ pokeData.id;
-    pokeCard.pokemonType= findTheType();
-    pokeCard.pokemonBackground= findTheBackground();
+    const pokeCard = document.querySelectorAll('.poke1');
+    console.log(document.querySelectorAll('.poke1'));
+    //test successfully passed!!
+    pokeCard.forEach((e)=>{
+        e.pokemonName=pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
+        e.pokemonImage= pokeData.thumbnail;
+        e.pokemonId= "#"+ pokeData.id;
+        e.pokemonType= findTheType();
+        e.pokemonBackground= findTheBackground();
+    })
+
+    //endoftest
+
+    const card= document.querySelector('.poke1');
+    card.addEventListener('click',()=>{
+        const profile = document.querySelector('.profile-stage').style.display= "block";
+        const cards = document.querySelector('.character-selection').style.display="none";
+    });
+    
+    
 
 
     function findTheBackground(){
