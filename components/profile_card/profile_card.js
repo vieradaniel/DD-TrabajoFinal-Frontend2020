@@ -66,6 +66,8 @@ templateProfile.innerHTML=`
         width:80%;
         color:white;
         border-radius:20px 20px 0 0;
+        position:fixed;
+        bottom:0;
     }
 
     
