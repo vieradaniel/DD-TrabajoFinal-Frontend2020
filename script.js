@@ -73,11 +73,7 @@ pokemon1.getData().then(pokeData =>{
 
     function findTheType(){
         const type= pokeData.type;
-        console.log(type)
-        const result= type[0].toString()
-            
-        console.log(result);
-        
+        const result= type[0].toString()                       
         const route = "static/"+ result +".png";
         return route;
         }
@@ -148,10 +144,10 @@ pokemon2.getData().then(pokeData =>{
 
     function findTheType(){
         const type= pokeData.type;
-        console.log(type)
+        
         const result= type[0].toString()
             
-        console.log(result);
+       
         
         const route = "static/"+ result +".png";
         return route;
@@ -220,10 +216,10 @@ pokemon3.getData().then(pokeData =>{
 
     function findTheType(){
         const type= pokeData.type;
-        console.log(type)
+        
         const result= type[0].toString()
             
-        console.log(result);
+       
         
         const route = "static/"+ result +".png";
         return route;
@@ -293,10 +289,10 @@ pokemon4.getData().then(pokeData =>{
 
     function findTheType(){
         const type= pokeData.type;
-        console.log(type)
+        
         const result= type[0].toString()
             
-        console.log(result);
+        
         
         const route = "static/"+ result +".png";
         return route;
@@ -366,10 +362,10 @@ pokemon3.getData().then(pokeData =>{
 
     function findTheType(){
         const type= pokeData.type;
-        console.log(type)
+        
         const result= type[0].toString()
             
-        console.log(result);
+       
         
         const route = "static/"+ result +".png";
         return route;
@@ -439,10 +435,10 @@ pokemon6.getData().then(pokeData =>{
 
     function findTheType(){
         const type= pokeData.type;
-        console.log(type)
+        
         const result= type[0].toString()
             
-        console.log(result);
+        
         
         const route = "static/"+ result +".png";
         return route;
