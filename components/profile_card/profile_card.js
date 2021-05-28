@@ -160,7 +160,12 @@ class ProfileCard extends HTMLElement{
        this.pokemonType = this.getAttribute("pokemonType");
        this.pokemonBackground = this.getAttribute("pokemonBackground");
        //console.log(this.shadowRoot.querySelector('.poke-card-container').style.background="red");
-      
+       /*
+       const button = document.querySelector('.bottom-button');
+       button.addEventListener('click',()=>{
+           alert('hello');
+       })
+       */
     }
 
 

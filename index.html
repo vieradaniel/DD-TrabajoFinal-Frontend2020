@@ -21,7 +21,7 @@
     <p class="choose-your-pokemon">CHOOSE YOUR POKEMON</p>
     <div class="pokemon-card-container">
             <pokemon-card class="pokemon-card poke1" id="poke1" ></pokemon-card>           
-            <pokemon-card class="pokemon-card" id="poke2"></pokemon-card>
+            <pokemon-card class="pokemon-card poke2" id="poke2"></pokemon-card>
             <pokemon-card class="pokemon-card" id="poke3"></pokemon-card>
             <pokemon-card class="pokemon-card" id="poke4"></pokemon-card>
             <pokemon-card class="pokemon-card" id="poke5"></pokemon-card>
@@ -30,10 +30,15 @@
 </main>
 
 <main class="profile-stage">
-    <profile-card class="profile-card poke1"></profile-card>
+    <profile-card class="profile-card poke1 " id="profile1"></profile-card>
+    <profile-card class="profile-card poke2 " id="profile2"></profile-card>
 </main>
+
 <main class="game-start-stage">
-    
+    <round-one class="round-one poke1"></round-one>  
+    <game-start class="poke1" id="game-start-1"></game-start>
+    <game-start class="poke2" id="game-start-2"></game-start>
+     
 </main>
 
 
@@ -46,6 +51,8 @@
     <script src="components/loading_button/loading_button.js"></script>
     <script src="components/pokemon_card/pokemon_card.js"></script>
     <script src="components/profile_card/profile_card.js"></script>
+    <script src="components/game_start/game_start.js"></script>
+    <script src="components/round_1/round_1.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

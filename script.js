@@ -1,3 +1,4 @@
+
 setTimeout(()=>{
     let loadingStage = document.querySelector('.loading-stage').style.display="none";
     let characterSelection = document.querySelector('.character-selection').style.display="block"
@@ -38,6 +39,8 @@ pokemon1.getData().then(pokeData =>{
     card.addEventListener('click',()=>{
         const profile = document.querySelector('.profile-stage').style.display= "block";
         const cards = document.querySelector('.character-selection').style.display="none";
+        const poke2 = document.querySelector('#profile2').style.display="none";
+        
     });
     
     
@@ -106,12 +109,25 @@ pokemon1.getData().then(pokeData =>{
 const pokemon2 = new CollectPokemonInfo();
 
 pokemon2.getData().then(pokeData =>{
-    const pokeCard = document.querySelector('#poke2');
-    pokeCard.pokemonName=pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
-    pokeCard.pokemonImage= pokeData.thumbnail;
-    pokeCard.pokemonId= "#"+ pokeData.id;
-    pokeCard.pokemonType= findTheType();
-    pokeCard.pokemonBackground= findTheBackground();
+    const pokeCard = document.querySelectorAll('.poke2');
+    //test successfully passed!!
+    pokeCard.forEach((e)=>{
+        e.pokemonName=pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
+        e.pokemonImage= pokeData.thumbnail;
+        e.pokemonId= "#"+ pokeData.id;
+        e.pokemonType= findTheType();
+        e.pokemonBackground= findTheBackground();
+    })
+
+    //endoftest
+
+    const card= document.querySelector('.poke2');
+    card.addEventListener('click',()=>{
+        const profile = document.querySelector('.profile-stage').style.display= "block";
+        const cards = document.querySelector('.character-selection').style.display="none";
+        const poke2 = document.querySelector('#profile1').style.display="none";
+        
+    });
 
 
     function findTheBackground(){
@@ -467,50 +483,51 @@ pokemon6.getData().then(pokeData =>{
 
 // start of pokefight -- first attempt (this is definitely not the way to do it.. until then...)
 //Callback Hell  XD
-pokemon1.getData().then(pokeData =>{
-    let hp1= pokeData.base.HP;
-    
-    pokemon2.getData().then(pokeData =>{
-        let hp2 = pokeData.base.HP;
-        
-        pokemon3.getData().then(pokeData =>{
-            let hp3 = pokeData.base.HP;
-            
-            pokemon4.getData().then(pokeData =>{
-                let hp4 = pokeData.base.HP;
-                
-                pokemon5.getData().then(pokeData =>{
-                    let hp5 = pokeData.base.HP;
-                    
-                    pokemon6.getData().then(pokeData =>{
-                        let hp6 = pokeData.base.HP;
-                        console.log(hp1);
-                        console.log(hp2);
-                        console.log(hp3);
-                        console.log(hp4);
-                        console.log(hp5);
-                        console.log(hp6);
-                        
-                        while(hp1 >0 && hp2>0){                         
-                           hp1 = parseInt(hp1) - parseInt(hp2);
-                           console.log(hp1);
-                           
-                        }
-                        
-                                              
-                                               
-                                              
-                       
-                    })
-                   
-                })
-               
-            })
-           
-        })
-    })
-    
 
-})
+
+    pokemon1.getData().then(pokeData =>{
+        let hp1= pokeData.base.HP;
+        
+        pokemon2.getData().then(pokeData =>{
+            let hp2 = pokeData.base.HP;
+            
+            pokemon3.getData().then(pokeData =>{
+                let hp3 = pokeData.base.HP;
+                
+                pokemon4.getData().then(pokeData =>{
+                    let hp4 = pokeData.base.HP;
+                    
+                    pokemon5.getData().then(pokeData =>{
+                        let hp5 = pokeData.base.HP;
+                        
+                        pokemon6.getData().then(pokeData =>{
+                            let hp6 = pokeData.base.HP;
+                            console.log(hp1);
+                            console.log(hp2);
+                            console.log(hp3);
+                            console.log(hp4);
+                            console.log(hp5);
+                            console.log(hp6);
+                            
+                            while(hp1 >0 && hp2>0){                         
+                            hp1 = parseInt(hp1) - parseInt(hp2);
+                            console.log(hp1);
+                            
+                            }
+                            
+                                                                                                                                                                       
+                        })
+                    
+                    })
+                
+                })
+            
+            })
+        })
+        
+
+    })
+
+
 
 // end of pokefight

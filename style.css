@@ -18,9 +18,7 @@ html body{
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    display:;
-    
-    
+    display:;       
    
     
 }
@@ -65,3 +63,33 @@ html body{
     padding:0;
     display:none;
 }
+
+.game-start-stage{
+    display:flex;
+    height:98vh;
+    width:100%;
+    display:none;
+    
+    
+
+    
+}
+#game-start-1{
+    width:50%;
+    
+   
+    
+    
+}
+#game-start-2{
+    width:50%;
+    
+}
+.round-one{
+    position:fixed;
+    z-index:10;
+   
+    
+}
+
+
