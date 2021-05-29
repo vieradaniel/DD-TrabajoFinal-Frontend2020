@@ -1,10 +1,10 @@
-
+/*
 setTimeout(()=>{
     let loadingStage = document.querySelector('.loading-stage').style.display="none";
     let characterSelection = document.querySelector('.character-selection').style.display="block"
 },1500);
 
-
+*/
 
 
 class CollectPokemonInfo{
