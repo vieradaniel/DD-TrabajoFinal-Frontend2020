@@ -52,23 +52,7 @@ templateProfile.innerHTML=`
         padding:1.5rem; 
         
     }
-    .bottom-button{
-        display:flex;
-        justify-content:center;
-    }
-    .button-fight{
-        font-family: acumin-pro-extra-condensed;
-        font-weight: 700;
-        font-style: italic;
-        font-size: 2.5rem;
-        border:none;
-        background:#3663AD;
-        width:80%;
-        color:white;
-        border-radius:20px 20px 0 0;
-        position:fixed;
-        bottom:0;
-    }
+   
 
     
 
@@ -112,9 +96,7 @@ templateProfile.innerHTML=`
         </div>
 
     </div>
-    <div class="bottom-button">
-        <button class="button-fight">FIGHT!</button>
-    </div>
+    
 
 </div>
 
@@ -160,8 +142,10 @@ class ProfileCard extends HTMLElement{
        this.pokemonType = this.getAttribute("pokemonType");
        this.pokemonBackground = this.getAttribute("pokemonBackground");
        //console.log(this.shadowRoot.querySelector('.poke-card-container').style.background="red");
-       /*
+       
        const button = document.querySelector('.bottom-button');
+       
+       /*
        button.addEventListener('click',()=>{
            alert('hello');
        })

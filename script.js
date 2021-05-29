@@ -5,6 +5,8 @@ setTimeout(()=>{
 },1500);
 
 
+
+
 class CollectPokemonInfo{
     getData(){
         return fetch('https://app.pokemon-api.xyz/pokemon/random')
@@ -26,12 +28,15 @@ pokemon1.getData().then(pokeData =>{
     const pokeCard = document.querySelectorAll('.poke1');
     //test successfully passed!!
     pokeCard.forEach((e)=>{
-        e.pokemonName=pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
+        
+        e.pokemonName= pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
         e.pokemonImage= pokeData.thumbnail;
         e.pokemonId= "#"+ pokeData.id;
         e.pokemonType= findTheType();
         e.pokemonBackground= findTheBackground();
+        
     })
+   
 
     //endoftest
 
@@ -42,6 +47,27 @@ pokemon1.getData().then(pokeData =>{
         const poke2 = document.querySelector('#profile2').style.display="none";
         
     });
+
+    // start of : button fight in profile stage---
+
+    fight();
+
+    function fight(){
+        const fight = document.querySelector('.button-fight-1');
+        fight.addEventListener('click',()=>{
+            const profile= document.querySelector('.profile-stage').style.display="none";
+            let loading = document.querySelector('.loading-stage').style.display="flex";
+            
+            setTimeout(()=>{
+                let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
+                loading = document.querySelector('.loading-stage').style.display="none";
+            },1500);
+            
+            
+        })
+    }
+    // end of : button fight in profile stage---
+    
     
     
 
