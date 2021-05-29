@@ -3,9 +3,12 @@ templateRound1.innerHTML=`
 
 <style>
 .card{
-    width:22rem;
+    font-family: acumin-pro-extra-condensed;
+    font-weight: 700;
+    font-style: italic;
+    width:100%;    
+   
     
-    border: 1px solid black;
 }
 .won-lost-score{
     display:flex;
@@ -13,8 +16,10 @@ templateRound1.innerHTML=`
 }
 .score {
     display:flex;
-    border:1px solid black;
-    padding:0.1rem;    
+    margin-bottom:1rem;
+    
+    
+        
 }
 
 .score .p1 {
@@ -22,11 +27,18 @@ templateRound1.innerHTML=`
     background: black;
     margin:0;
     padding:0.1rem;
+    width:7rem;
+    font-size: 1.5rem;
+    text-align:center;
+
+   
 }
-.score .p2{
+.score .p2{ 
     background:#FFF;
     margin:0;
-    padding:0.1rem;
+    padding:0 0.3rem;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
     
 }
 .round-one-container{
@@ -34,11 +46,40 @@ templateRound1.innerHTML=`
     padding:1rem;
     display:flex;
     justify-content:center;
+    font-size: 2rem;
 }
 h1{
     margin:none;
 }
-
+.round-1{
+    margin:0;
+}
+.pokenames{ 
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+p{
+    margin:0;
+}
+.pokeName1 ,.pokeName2{
+    color:white;
+    background:black;
+    font-size:1.5rem;
+    padding:0.1rem;
+}
+.pokeName1{
+    margin-right:4rem;
+}
+.pokeName2{
+    margin-left:3rem;
+}
+.vs{
+    background:#FFF;
+    font-size:1rem;
+    padding:0.1rem;
+}
 
 </style>
 <div class="card">
@@ -50,18 +91,19 @@ h1{
         </div>
 
         <div class="score">
-            <p class="p1">LOST</p>
             <p class="p2">00</p>
+            <p class="p1">LOST</p>
+           
         </div>
     </div>
 
     <div class="round-one-container">
-        <h1>ROUND 1</h1>
+        <h1 class="round-1">ROUND 1</h1>
     </div>
-    <div>
+    <div class="pokenames">
         <p class="pokeName1">Pikachu</p>
-        <p>vs</p>
-        <p>Lapras</p>
+        <p class="vs">vs</p>
+        <p class="pokeName2">Lapras</p>
     </div>
 </div>
 `
