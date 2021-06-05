@@ -605,16 +605,39 @@ function pokeFight(pokemonOne,pokemonTwo){
             console.log ("BASE hp2: " + hp2);
             console.log ("attack2 " + attack2);
             console.log ("defense2 " + defense2);                            
-                            
-            while(hp1 >0 && hp2>0){ 
-                
+             
+            let hpOneCounter = hp1;
+            let hpTwoCounter = hp2;
 
-                hp1 = hp1-(attack2-40);
-                hp2 = hp2 - attack1;
-                console.log (hp1);
-                console.log(hp2);
-                
+            let interval = setInterval (fight,3000)
+            function fight(){
+                hpOneCounter = hpOneCounter-(attack2-40);
+                hpTwoCounter = hpTwoCounter - (attack1-30);
+                console.log (hpOneCounter);
+                console.log(hpTwoCounter);
+                if(hpOneCounter <= 0 || hpTwoCounter <= 0){
+                    clearInterval(interval);
                 }
+            }
+            
+            /*
+                while(hpOneCounter >0 && hpTwoCounter>0){ 
+                    
+                    
+                    fight();
+                
+                    function fight(){
+                        hpOneCounter = hpOneCounter-(attack2-40);
+                        hpTwoCounter = hpTwoCounter - (attack1-30);
+                        console.log (hpOneCounter);
+                        console.log(hpTwoCounter);
+                    }
+                    
+                    
+                }
+
+            */
+            
                             
                     
             
