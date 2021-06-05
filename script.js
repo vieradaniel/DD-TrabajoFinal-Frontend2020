@@ -607,11 +607,13 @@ function pokeFight(pokemonOne,pokemonTwo){
             console.log ("defense2 " + defense2);                            
                             
             while(hp1 >0 && hp2>0){ 
+                
 
-                hp1 = hp1 - attack2;
+                hp1 = hp1-(attack2-40);
                 hp2 = hp2 - attack1;
-                console.log ("hp1: " + hp1);
-                console.log("hp2: "+ hp2);            
+                console.log (hp1);
+                console.log(hp2);
+                
                 }
                             
                     
