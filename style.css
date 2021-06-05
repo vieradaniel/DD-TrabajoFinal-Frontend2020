@@ -18,7 +18,7 @@ html body{
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    display:;       
+    display:none;       
    
     
 }
@@ -68,7 +68,7 @@ html body{
     display:flex;
     height:98vh;
     width:100%;
-    display:none;
+    display:;
       
     
 }
@@ -88,8 +88,15 @@ html body{
     top:0;
     z-index:10;
     width:100%;
+    display:none;
    
     
+}
+.health-bar-container{
+    top:10%;
+    left:45%;
+    position:fixed;
+    z-index:30;
 }
 
 

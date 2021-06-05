@@ -1,10 +1,10 @@
-
+/*
 setTimeout(()=>{
     let loadingStage = document.querySelector('.loading-stage').style.display="none";
     let characterSelection = document.querySelector('.character-selection').style.display="block"
 },1500);
 
-
+*/
 
 
 class CollectPokemonInfo{
@@ -21,6 +21,22 @@ class CollectPokemonInfo{
     }
 }
 
+
+
+// testing timeout
+
+
+
+function countDown(){
+    setInterval(function(){
+        
+        }, 3000);
+}
+
+
+
+//
+
 //POKEMON 1--------------------------------------------------------------------
 const pokemon1 = new CollectPokemonInfo();
 
@@ -34,6 +50,7 @@ pokemon1.getData().then(pokeData =>{
         e.pokemonId= "#"+ pokeData.id;
         e.pokemonType= findTheType();
         e.pokemonBackground= findTheBackground();
+        e.pokemonHp = pokeData.base.HP;
         
     })
    
@@ -143,10 +160,13 @@ pokemon2.getData().then(pokeData =>{
         e.pokemonId= "#"+ pokeData.id;
         e.pokemonType= findTheType();
         e.pokemonBackground= findTheBackground();
+        e.pokemonHp = pokeData.base.HP;
     })
 
     //endoftest
+    
 
+    
     const card= document.querySelector('.poke2');
     card.addEventListener('click',()=>{
         const profile = document.querySelector('.profile-stage').style.display= "block";
@@ -509,11 +529,14 @@ pokemon6.getData().then(pokeData =>{
 
 // start of pokefight -- first attempt (this is definitely not the way to do it.. until then...)
 //Callback Hell  XD
-
-
+/*
+pokeFight();
+function pokeFight(){
     pokemon1.getData().then(pokeData =>{
         let hp1= pokeData.base.HP;
-        
+        let attack1 = pokeData.base.Attack;
+        let defense1= pokeData.base.Defense;
+                
         pokemon2.getData().then(pokeData =>{
             let hp2 = pokeData.base.HP;
             
@@ -529,6 +552,8 @@ pokemon6.getData().then(pokeData =>{
                         pokemon6.getData().then(pokeData =>{
                             let hp6 = pokeData.base.HP;
                             console.log(hp1);
+                            console.log("ataque: "+ attack1);
+                            console.log("defenza: " +defense1);
                             console.log(hp2);
                             console.log(hp3);
                             console.log(hp4);
@@ -553,7 +578,44 @@ pokemon6.getData().then(pokeData =>{
         
 
     })
+}
 
-
+*/
 
 // end of pokefight
+
+
+//another test for fighting algorithm
+
+pokeFight(pokemon1,pokemon2);
+
+function pokeFight(pokemonOne,pokemonTwo){
+    pokemonOne.getData().then(pokeData =>{
+        let hp1= pokeData.base.HP;
+        let attack1 = pokeData.base.Attack;
+        let defense1= pokeData.base.Defense;
+        console.log ("BASE hp1: " + hp1);
+        console.log ("attack1 " + attack1);
+        console.log ("defense1 " + defense1);
+                
+        pokemonTwo.getData().then(pokeData =>{
+            let hp2 = pokeData.base.HP;
+            let attack2 = pokeData.base.Attack;
+            let defense2= pokeData.base.Defense;
+            console.log ("BASE hp2: " + hp2);
+            console.log ("attack2 " + attack2);
+            console.log ("defense2 " + defense2);                            
+                            
+            while(hp1 >0 && hp2>0){ 
+
+                hp1 = hp1 - attack2;
+                hp2 = hp2 - attack1;
+                console.log ("hp1: " + hp1);
+                console.log("hp2: "+ hp2);            
+                }
+                            
+                    
+            
+            })
+    })
+}
