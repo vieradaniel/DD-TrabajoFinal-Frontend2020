@@ -86,7 +86,8 @@ p{
     <div class="won-lost-score">
         <div class="score">
             <p class="p1">WON</p>
-            <p class="p2">00</p>
+            <p class="p2 pokeCounter1">00</p>
+            
             
         </div>
 
@@ -121,9 +122,16 @@ class RoundOne extends HTMLElement{
     set pokemonName(newPokeName){
         this.shadowRoot.querySelector('.pokeName1').innerHTML = newPokeName;
     }
+    get pokemonCounter1(){
+        return this.shadowRoot.querySelector('.pokeCounter1').innerHTML;
+    }
+    set pokemonCounter1(newPokeCounter1){
+        this.shadowRoot.querySelector('.pokeCounter1').innerHTML = newPokeCounter1;
+    }
 
     connectedCallback(){
         this.pokemonName=this.getAttribute("pokemonName");
+        this.pokemonCounter1=this.getAttribute("pokeCounter1");
     }
     
 

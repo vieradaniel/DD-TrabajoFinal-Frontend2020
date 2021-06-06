@@ -40,12 +40,17 @@ function countDown(){
 //POKEMON 1--------------------------------------------------------------------
 const pokemon1 = new CollectPokemonInfo();
 
+
 pokemon1.getData().then(pokeData =>{
     const pokeCard1 = document.querySelectorAll('.poke1');
     
     let hp1 = pokeData.base.HP;
     let attack1 = pokeData.base.Attack;
-    let defense1= pokeData.base.Defense; 
+    let defense1= pokeData.base.Defense;
+    let pokeCounter1 = 0;
+     
+
+    
 
     pokeCard1.forEach((e)=>{
         
@@ -55,6 +60,7 @@ pokemon1.getData().then(pokeData =>{
         e.pokemonType= findTheType();
         e.pokemonBackground= findTheBackground();
         e.pokemonHp = pokeData.base.HP;
+        e.pokemonCounter1 = pokeCounter1;
        
         
     })
@@ -268,7 +274,7 @@ pokemon1.getData().then(pokeData =>{
 
                     setTimeout(()=>{
                         clearInterval(interval); 
-                    },9000);
+                    },11000);
                                        
                     
                     
@@ -306,9 +312,27 @@ pokemon1.getData().then(pokeData =>{
                 
                 console.log (hpOneCounter);
                 console.log(hpTwoCounter);
-                if(hpOneCounter <= 0 || hpTwoCounter <= 0){
+                if(hpOneCounter <= 0 ){
                     // I guess I should erase this clear interval
-                    clearInterval(interval);
+                    //clearInterval(interval);
+                    console.log( "pokemon 2 won");
+                }else if (hpTwoCounter <= 0){
+                    
+                    console.log("pokemon 1 before winning" + pokeCounter1);
+                    pokeCounter1 ++;
+
+                    const pokeCounterOne = document.querySelectorAll('round-one');                    
+            
+                        pokeCounterOne.forEach((e)=>{     
+
+                            e.pokemonCounter1 = pokeCounter1;                  
+                    
+                    })
+
+                    console.log("pokemon 1 after winning" + pokeCounter1);
+                    document.querySelector('.round-one').style.display="block";
+                    document.querySelector('.health-bar-container').style.display="none";
+
                 }
             }
 
