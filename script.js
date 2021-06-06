@@ -257,7 +257,7 @@ pokemon1.getData().then(pokeData =>{
 
                     let interval = setInterval (fight2,3000);
                     
-                    console.log(interval);
+                    
 
                     setTimeout(()=>{
                         clearInterval(interval); 
