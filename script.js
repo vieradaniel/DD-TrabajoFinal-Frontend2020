@@ -254,14 +254,21 @@ pokemon1.getData().then(pokeData =>{
             function fightButton2(){
                 const fight = document.querySelector('.button-fight-1');
                 fight.addEventListener('click',()=>{
+                    document.querySelector('.round-one').style.display="block";
+                    document.querySelector('.health-bar-container').style.display="none";
+                    setTimeout(()=>{
+                        document.querySelector('.round-one').style.display="none";
+                        document.querySelector('.health-bar-container').style.display="block";
+                    },4000);
+                    
 
-                    let interval = setInterval (fight2,3000);
+                    let interval = setInterval (fight2,4000);
                     
                     
 
                     setTimeout(()=>{
                         clearInterval(interval); 
-                    },7000);
+                    },9000);
                                        
                     
                     
@@ -300,6 +307,7 @@ pokemon1.getData().then(pokeData =>{
                 console.log (hpOneCounter);
                 console.log(hpTwoCounter);
                 if(hpOneCounter <= 0 || hpTwoCounter <= 0){
+                    // I guess I should erase this clear interval
                     clearInterval(interval);
                 }
             }
