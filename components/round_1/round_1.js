@@ -92,7 +92,7 @@ p{
         </div>
 
         <div class="score">
-            <p class="p2">00</p>
+            <p class="p2 pokeCounter2">00</p>
             <p class="p1">LOST</p>
            
         </div>
@@ -129,9 +129,24 @@ class RoundOne extends HTMLElement{
         this.shadowRoot.querySelector('.pokeCounter1').innerHTML = newPokeCounter1;
     }
 
+    get pokemonName2(){
+        return this.shadowRoot.querySelector('.pokeName2').innerHTML;
+    }
+    set pokemonName2(newPokeName2){
+        this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName2;
+    }
+    get pokemonCounter2(){
+        return this.shadowRoot.querySelector('.pokeCounter2').innerHTML;
+    }
+    set pokemonCounter2(newPokeCounter2){
+        this.shadowRoot.querySelector('.pokeCounter2').innerHTML = newPokeCounter2;
+    }
+
     connectedCallback(){
         this.pokemonName=this.getAttribute("pokemonName");
         this.pokemonCounter1=this.getAttribute("pokeCounter1");
+        this.pokemonName2=this.getAttribute("pokemonName2");
+        this.pokemonCounter2=this.getAttribute("pokeCounter2");
     }
     
 

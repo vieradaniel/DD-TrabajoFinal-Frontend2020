@@ -48,6 +48,7 @@ pokemon1.getData().then(pokeData =>{
     let attack1 = pokeData.base.Attack;
     let defense1= pokeData.base.Defense;
     let pokeCounter1 = 0;
+    let pokeCounter2 = 0; 
      
 
     
@@ -61,6 +62,7 @@ pokemon1.getData().then(pokeData =>{
         e.pokemonBackground= findTheBackground();
         e.pokemonHp = pokeData.base.HP;
         e.pokemonCounter1 = pokeCounter1;
+        e.pokemonCounter2 = pokeCounter2;
        
         
     })
@@ -167,15 +169,18 @@ pokemon1.getData().then(pokeData =>{
             
             let hp2 = pokeData.base.HP;
             let attack2 = pokeData.base.Attack;
-            let defense2= pokeData.base.Defense; 
+            let defense2= pokeData.base.Defense;
+            
 
             pokeCard2.forEach((e)=>{
-                e.pokemonName=pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
+                
                 e.pokemonImage= pokeData.thumbnail;
                 e.pokemonId= "#"+ pokeData.id;
                 e.pokemonType= findTheType();
                 e.pokemonBackground= findTheBackground();
                 e.pokemonHp = pokeData.base.HP;
+                e.pokemonName2=pokeData.name.english;
+                
             })
            
 
@@ -316,6 +321,22 @@ pokemon1.getData().then(pokeData =>{
                     // I guess I should erase this clear interval
                     //clearInterval(interval);
                     console.log( "pokemon 2 won");
+                    pokeCounter2 ++;
+
+                    const pokeCounterTwo = document.querySelectorAll('round-one');                    
+            
+                        pokeCounterTwo.forEach((e)=>{     
+
+                            e.pokemonCounter2 = pokeCounter2;                  
+                    
+                    })
+
+                    console.log("pokemon 1 after losing" + pokeCounter2);
+                    document.querySelector('.round-one').style.display="block";
+                    document.querySelector('.health-bar-container').style.display="none";
+
+
+
                 }else if (hpTwoCounter <= 0){
                     
                     console.log("pokemon 1 before winning" + pokeCounter1);
