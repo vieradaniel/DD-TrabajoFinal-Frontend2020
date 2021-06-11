@@ -15,6 +15,8 @@ class CollectPokemonInfo{
         })
         .then((json)=>{
 
+          
+
             return json;
 
         });
@@ -43,10 +45,35 @@ const pokemon1 = new CollectPokemonInfo();
 
 pokemon1.getData().then(pokeData =>{
     const pokeCard1 = document.querySelectorAll('.poke1');
+    let hp1;
+        if (pokeData.base === undefined){
+            hp1 = 44;
+            
+        }else{
+            hp1 = pokeData.base.HP;
+        
+        }
     
-    let hp1 = pokeData.base.HP;
-    let attack1 = pokeData.base.Attack;
-    let defense1= pokeData.base.Defense;
+    
+    
+    let attack1;
+    if (pokeData.base === undefined){
+        attack1 = 44;
+        
+    }else{
+        attack1 = pokeData.base.Attack;
+       
+    }
+    
+    let defense1;
+    if (pokeData.base === undefined){
+        defense1 = 44;
+        
+    }else{
+        defense1 = pokeData.base.Defense;
+       
+    }
+
     let pokeCounter1 = 0;
     let pokeCounter2 = 0; 
      
@@ -60,7 +87,7 @@ pokemon1.getData().then(pokeData =>{
         e.pokemonId= "#"+ pokeData.id;
         e.pokemonType= findTheType();
         e.pokemonBackground= findTheBackground();
-        e.pokemonHp = pokeData.base.HP;
+        e.pokemonHp = hp1;
         e.pokemonCounter1 = pokeCounter1;
         e.pokemonCounter2 = pokeCounter2;
        
@@ -167,9 +194,32 @@ pokemon1.getData().then(pokeData =>{
         pokemon2.getData().then(pokeData =>{
             const pokeCard2 = document.querySelectorAll('.poke2');
             
-            let hp2 = pokeData.base.HP;
-            let attack2 = pokeData.base.Attack;
-            let defense2= pokeData.base.Defense;
+            let hp2;
+            if (pokeData.base === undefined){
+                hp2 = 44;
+                
+            }else{
+                hp2 = pokeData.base.HP;
+               
+            }
+
+            let attack2;
+            if (pokeData.base === undefined){
+                attack2 = 44;
+                
+            }else{
+                attack2 = pokeData.base.Attack;
+            
+            }
+            
+            let defense2;
+            if (pokeData.base === undefined){
+                defense2 = 44;
+                
+            }else{
+                defense2 = pokeData.base.Defense;
+            
+            }
             
 
             pokeCard2.forEach((e)=>{
@@ -178,7 +228,7 @@ pokemon1.getData().then(pokeData =>{
                 e.pokemonId= "#"+ pokeData.id;
                 e.pokemonType= findTheType();
                 e.pokemonBackground= findTheBackground();
-                e.pokemonHp = pokeData.base.HP;
+                e.pokemonHp = hp2;
                 e.pokemonName2=pokeData.name.english;
                 
             })
@@ -277,78 +327,78 @@ pokemon1.getData().then(pokeData =>{
                     
                     let interval = setInterval (fight2,4000);
                     
-                    //let interval = setInterval (fight2,3000)
-            function fight2(){
-                
-                hpOneCounter = hpOneCounter-(attack2-40);
-                hpTwoCounter = hpTwoCounter - (attack1-30);
-                
-                
-                // I pass the new value to poke hp counter 1 to innerHtml 
-                const pokeCard1 = document.querySelectorAll('.poke1');                    
-            
-                pokeCard1.forEach((e)=>{     
-
-                    e.pokemonHp = hpOneCounter;                  
                     
-                })
-                
-                
-                
-                const pokeCard2 = document.querySelectorAll('.poke2');                    
-            
-                pokeCard2.forEach((e)=>{     
-
-                    e.pokemonHp = hpTwoCounter;                  
+                    function fight2(){
+                        
+                        hpOneCounter = hpOneCounter-(attack2-40);
+                        hpTwoCounter = hpTwoCounter - (attack1-30);
+                        
+                        
+                        // I pass the new value to poke hp counter 1 to innerHtml 
+                        const pokeCard1 = document.querySelectorAll('.poke1');                    
                     
-                })
-                
-                console.log (hpOneCounter);
-                console.log(hpTwoCounter);
-                if(hpOneCounter <= 0 ){
-                    // I guess I should erase this clear interval
-                    clearInterval(interval);
-                    console.log( "pokemon 2 won");
-                    pokeCounter2 ++;
+                        pokeCard1.forEach((e)=>{     
 
-                    const pokeCounterTwo = document.querySelectorAll('round-one');                    
-            
-                        pokeCounterTwo.forEach((e)=>{     
-
-                            e.pokemonCounter2 = pokeCounter2;                  
+                            e.pokemonHp = hpOneCounter;                  
+                            
+                        })
+                        
+                        
+                        
+                        const pokeCard2 = document.querySelectorAll('.poke2');                    
                     
-                    })
+                        pokeCard2.forEach((e)=>{     
 
-                    console.log("pokemon 1 after losing" + pokeCounter2);
-                    document.querySelector('.round-one').style.display="block";
-                    document.querySelector('.health-bar-container').style.display="none";
-                    stopIt = 1;
+                            e.pokemonHp = hpTwoCounter;                  
+                            
+                        })
+                        
+                        console.log (hpOneCounter);
+                        console.log(hpTwoCounter);
+                        if(hpOneCounter <= 0 ){
+                            
+                            clearInterval(interval);
+                            console.log( "pokemon 2 won");
+                            pokeCounter2 ++;
+
+                            const pokeCounterTwo = document.querySelectorAll('round-one');                    
                     
+                                pokeCounterTwo.forEach((e)=>{     
+
+                                    e.pokemonCounter2 = pokeCounter2;                  
+                            
+                            })
+
+                            console.log("pokemon 1 after losing" + pokeCounter2);
+                            document.querySelector('.round-one').style.display="block";
+                            document.querySelector('.health-bar-container').style.display="none";
+                            stopIt = 1;
+                            
 
 
 
-                }else if (hpTwoCounter <= 0){
-                    clearInterval(interval);
-                    console.log("pokemon 1 before winning" + pokeCounter1);
-                    pokeCounter1 ++;
+                        }else if (hpTwoCounter <= 0){
+                            clearInterval(interval);
+                            console.log("pokemon 1 before winning" + pokeCounter1);
+                            pokeCounter1 ++;
 
-                    const pokeCounterOne = document.querySelectorAll('round-one');                    
-            
-                        pokeCounterOne.forEach((e)=>{     
-
-                            e.pokemonCounter1 = pokeCounter1;                  
+                            const pokeCounterOne = document.querySelectorAll('round-one');                    
                     
-                    })
+                                pokeCounterOne.forEach((e)=>{     
 
-                    console.log("pokemon 1 after winning" + pokeCounter1);
-                    document.querySelector('.round-one').style.display="block";
-                    document.querySelector('.health-bar-container').style.display="none";
+                                    e.pokemonCounter1 = pokeCounter1;                  
+                            
+                            })
 
-                    
-                    
+                            console.log("pokemon 1 after winning" + pokeCounter1);
+                            document.querySelector('.round-one').style.display="block";
+                            document.querySelector('.health-bar-container').style.display="none";
 
-                }
-            }
+                            
+                            
+
+                        }
+                    }
                     
                     
                     
