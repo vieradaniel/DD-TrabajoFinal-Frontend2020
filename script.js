@@ -260,9 +260,11 @@ pokemon1.getData().then(pokeData =>{
             let hpTwoCounter = hp2;
 
             // adding an event listener for the fighting button - there is one already but i couldn't add the function fight2() because of the scope I guess..?
+            
             fightButton2();
 
             function fightButton2(){
+               
                 const fight = document.querySelector('.button-fight-1');
                 fight.addEventListener('click',()=>{
                     document.querySelector('.round-one').style.display="block";
@@ -272,24 +274,10 @@ pokemon1.getData().then(pokeData =>{
                         document.querySelector('.health-bar-container').style.display="block";
                     },4000);
                     
-
+                    
                     let interval = setInterval (fight2,4000);
                     
-                    
-
-                    setTimeout(()=>{
-                        clearInterval(interval); 
-                    },11000);
-                                       
-                    
-                    
-                })
-            }
-
-
-            //
-    
-            //let interval = setInterval (fight2,3000)
+                    //let interval = setInterval (fight2,3000)
             function fight2(){
                 
                 hpOneCounter = hpOneCounter-(attack2-40);
@@ -319,7 +307,7 @@ pokemon1.getData().then(pokeData =>{
                 console.log(hpTwoCounter);
                 if(hpOneCounter <= 0 ){
                     // I guess I should erase this clear interval
-                    //clearInterval(interval);
+                    clearInterval(interval);
                     console.log( "pokemon 2 won");
                     pokeCounter2 ++;
 
@@ -334,11 +322,13 @@ pokemon1.getData().then(pokeData =>{
                     console.log("pokemon 1 after losing" + pokeCounter2);
                     document.querySelector('.round-one').style.display="block";
                     document.querySelector('.health-bar-container').style.display="none";
+                    stopIt = 1;
+                    
 
 
 
                 }else if (hpTwoCounter <= 0){
-                    
+                    clearInterval(interval);
                     console.log("pokemon 1 before winning" + pokeCounter1);
                     pokeCounter1 ++;
 
@@ -354,8 +344,29 @@ pokemon1.getData().then(pokeData =>{
                     document.querySelector('.round-one').style.display="block";
                     document.querySelector('.health-bar-container').style.display="none";
 
+                    
+                    
+
                 }
             }
+                    
+                    
+                    
+
+                    
+                                       
+                    
+                    
+                })
+
+
+                
+            }
+
+
+            //
+    
+            
 
 
             
