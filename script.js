@@ -82,59 +82,6 @@ pokemon1.getData().then(pokeData =>{
         
     })
 
-   
-   
-
-    
-
-    const card= document.querySelector('.poke1');
-    card.addEventListener('click',()=>{
-        const profile = document.querySelector('.profile-stage').style.display= "block";
-        const cards = document.querySelector('.character-selection').style.display="none";
-        
-        const buttonFight2 = document.querySelector('.button-fight-2').style.display="none";
-        const buttonFight3 = document.querySelector('.button-fight-3').style.display="none";
-        const buttonFight4 = document.querySelector('.button-fight-4').style.display="none";
-        const buttonFight5 = document.querySelector('.button-fight-5').style.display="none";
-        const buttonFight6 = document.querySelector('.button-fight-6').style.display="none";
-
-        const pokeProfile2 = document.querySelector('#profile2').style.display="none";
-        const pokeProfile3 = document.querySelector('#profile3').style.display="none";
-        const pokeProfile4 = document.querySelector('#profile4').style.display="none";
-        const pokeProfile5 = document.querySelector('#profile5').style.display="none";
-        const pokeProfile6 = document.querySelector('#profile6').style.display="none";
-        
-               
-        
-        
-    });
-
-    // start of : button fight in profile stage---
-
-    fight();
-
-    function fight(){
-        const fight = document.querySelector('.button-fight-1');
-        fight.addEventListener('click',()=>{
-            const profile= document.querySelector('.profile-stage').style.display="none";
-            let loading = document.querySelector('.loading-stage').style.display="flex";
-            
-            setTimeout(()=>{
-                let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
-                loading = document.querySelector('.loading-stage').style.display="none";
-            },1500);
-
-            
-            
-            
-        })
-    }
-    // end of : button fight in profile stage---
-    
-    
-    
-
-
     function findTheBackground(){
         let final=0;
         const background = pokeData.type;
@@ -189,6 +136,66 @@ pokemon1.getData().then(pokeData =>{
         return route;
         }
 
+
+   
+   
+
+    
+//start ------- click on a card in "select your pokemon" and it will display its profile--------------------
+    const card= document.querySelector('.poke1');
+    card.addEventListener('click',()=>{
+        const profile = document.querySelector('.profile-stage').style.display= "block";
+        const cards = document.querySelector('.character-selection').style.display="none";
+        
+        const buttonFight2 = document.querySelector('.button-fight-2').style.display="none";
+        const buttonFight3 = document.querySelector('.button-fight-3').style.display="none";
+        const buttonFight4 = document.querySelector('.button-fight-4').style.display="none";
+        const buttonFight5 = document.querySelector('.button-fight-5').style.display="none";
+        const buttonFight6 = document.querySelector('.button-fight-6').style.display="none";
+
+        const pokeProfile2 = document.querySelector('#profile2').style.display="none";
+        const pokeProfile3 = document.querySelector('#profile3').style.display="none";
+        const pokeProfile4 = document.querySelector('#profile4').style.display="none";
+        const pokeProfile5 = document.querySelector('#profile5').style.display="none";
+        const pokeProfile6 = document.querySelector('#profile6').style.display="none";
+        
+               
+        
+        
+    });
+
+//end ------- click on a card in "select your pokemon" and it will display its profile--------------------
+
+// start of : button fight in profile stage 1-----------------------------------------------------------------
+
+    showPokeOneVSPokeTwo();
+
+    function showPokeOneVSPokeTwo(){
+        const fight = document.querySelector('.button-fight-1');
+        fight.addEventListener('click',()=>{
+            const profile= document.querySelector('.profile-stage').style.display="none";
+            let loading = document.querySelector('.loading-stage').style.display="flex";
+            const gameStart1= document.querySelector('#game-start-1').style.display="block";
+            const gameStart2= document.querySelector('#game-start-2').style.display="block";
+            
+            setTimeout(()=>{
+                
+                let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
+                loading = document.querySelector('.loading-stage').style.display="none";
+            },1500);
+
+            
+            
+            
+        })
+    }
+// end of : button fight in profile stage---
+    
+    
+    
+
+
+    
 // start of testing nesting fetch--------------------------------
 
         const pokemon2 = new CollectPokemonInfo();
@@ -328,27 +335,7 @@ pokemon1.getData().then(pokeData =>{
             
             fightButton2();
 
-            fight();
-
-            // 1st profile fight button function (I wrote two for the same button? (fight and fightbutton2))
-
-            function fight(){
-                const fight = document.querySelector('.button-fight-1');
-                fight.addEventListener('click',()=>{
-                    const profile= document.querySelector('.profile-stage').style.display="none";
-                    let loading = document.querySelector('.loading-stage').style.display="flex";
-                    
-                    setTimeout(()=>{
-                        
-                        loading = document.querySelector('.loading-stage').style.display="none";
-                        let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
-                    },1500);
-
-                    
-                    
-                    
-                })
-            }
+           
 
             // 2nd profile fight button functio
 
@@ -1515,6 +1502,13 @@ pokemon1.getData().then(pokeData =>{
                                 
                         
                             }
+                            // I can write anything I want in here and it will work I guess xD
+
+
+                            //
+
+
+
                         })
 
                         //in here poke 6 -- ends
