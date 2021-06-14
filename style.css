@@ -94,11 +94,21 @@ html body{
    
     
 }
+.round-two{
+    position:fixed;
+    top:0;
+    z-index:10;
+    width:100%;
+    display:none;
+}
 .health-bar-container{
     top:10%;
     left:45%;
     position:fixed;
     z-index:30;
+}
+.health-bar1,.health-bar2,.health-bar3,.health-bar4,.health-bar5,.health-bar6{
+    display:none;
 }
 
 .button-fight-2{

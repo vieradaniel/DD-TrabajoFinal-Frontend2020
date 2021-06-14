@@ -1437,6 +1437,8 @@ pokemon1.getData().then(pokeData =>{
                                         setTimeout(()=>{
                                             document.querySelector('.round-one').style.display="none";
                                             document.querySelector('.health-bar-container').style.display="block";
+                                            document.querySelector('.health-bar1').style.display="block";
+                                            document.querySelector('.health-bar2').style.display="block";
                                         },3000);
 
                                         //I call the function of poke battle here
@@ -1490,9 +1492,10 @@ pokemon1.getData().then(pokeData =>{
                                                 document.querySelector('.round-one').style.display="block";
                                                 document.querySelector('.next').style.display="flex";
                                                 document.querySelector('.health-bar-container').style.display="none";
+                                                document.querySelector('.health-bar1').style.display="none";
+                                                document.querySelector('.health-bar2').style.display="none";
                                                 
-                                                round +=1;
-                                                console.log(round);
+                                                
                                                 
 
 
@@ -1516,8 +1519,7 @@ pokemon1.getData().then(pokeData =>{
                                                 document.querySelector('.next').style.display="flex";
                                                 document.querySelector('.health-bar-container').style.display="none";
                                                
-                                                round +=1;
-                                                console.log(round)
+                                                
 
                                                 
                                                 
@@ -1547,14 +1549,17 @@ pokemon1.getData().then(pokeData =>{
                                         let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
                                         loading = document.querySelector('.loading-stage').style.display="none";
                                         const gameStart1= document.querySelector('#game-start-1').style.display="block";
-                                        const gameStart2= document.querySelector('#game-start-2').style.display="block";
-                                        const roundOne = document.querySelector('.round-one').style.display="block";
+                                        const gameStart2= document.querySelector('#game-start-2').style.display="none";
+                                        const gameStart3= document.querySelector('#game-start-3').style.display="block";
+                                        const roundTwo = document.querySelector('.round-two').style.display="flex";
                                         const healthBar= document.querySelector('.health-bar-container').style.display="none";
                                     },1500);
 
                                     setTimeout(()=>{
-                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
                                         document.querySelector('.health-bar-container').style.display="block";
+                                        document.querySelector('.health-bar1').style.display="block";
+                                            document.querySelector('.health-bar3').style.display="block";
                                     },3000);
 
                                     //I call the function of poke battle here
@@ -1605,7 +1610,7 @@ pokemon1.getData().then(pokeData =>{
                                             })
 
                                             console.log("pokemon 1 after losing" + pokeCounter2);
-                                            document.querySelector('.round-one').style.display="block";
+                                            document.querySelector('.round-two').style.display="block";
                                             document.querySelector('.next').style.display="flex";
                                             document.querySelector('.health-bar-container').style.display="none";
                                             
@@ -1630,7 +1635,7 @@ pokemon1.getData().then(pokeData =>{
                                             })
 
                                             console.log("pokemon 1 after winning" + pokeCounter1);
-                                            document.querySelector('.round-one').style.display="block";
+                                            document.querySelector('.round-two').style.display="block";
                                             document.querySelector('.next').style.display="flex";
                                             document.querySelector('.health-bar-container').style.display="none";
                                            

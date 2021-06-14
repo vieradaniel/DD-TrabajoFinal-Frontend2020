@@ -80,6 +80,36 @@ class PokemonCard extends HTMLElement{
     set pokemonName(newPokeName){
         this.shadowRoot.querySelector('.poke-card-bottom').innerHTML = newPokeName;
     }
+    get pokemonName2(){
+        return this.shadowRoot.querySelector('.poke-card-bottom').innerHTML;
+    }
+    set pokemonName2(newPokeName2){
+        this.shadowRoot.querySelector('.poke-card-bottom').innerHTML = newPokeName2;
+    }
+    get pokemonName3(){
+        return this.shadowRoot.querySelector('.poke-card-bottom').innerHTML;
+    }
+    set pokemonName3(newPokeName3){
+        this.shadowRoot.querySelector('.poke-card-bottom').innerHTML = newPokeName3;
+    }
+    get pokemonName4(){
+        return this.shadowRoot.querySelector('.poke-card-bottom').innerHTML;
+    }
+    set pokemonName4(newPokeName4){
+        this.shadowRoot.querySelector('.poke-card-bottom').innerHTML = newPokeName4;
+    }
+    get pokemonName5(){
+        return this.shadowRoot.querySelector('.poke-card-bottom').innerHTML;
+    }
+    set pokemonName5(newPokeName5){
+        this.shadowRoot.querySelector('.poke-card-bottom').innerHTML = newPokeName5;
+    }
+    get pokemonName6(){
+        return this.shadowRoot.querySelector('.poke-card-bottom').innerHTML;
+    }
+    set pokemonName6(newPokeName6){
+        this.shadowRoot.querySelector('.poke-card-bottom').innerHTML = newPokeName6;
+    }
     get pokemonImage(){
         return this.shadowRoot.querySelector('#pokePicture').src;
     }
@@ -109,6 +139,11 @@ class PokemonCard extends HTMLElement{
     connectedCallback(){
          
        this.pokemonName= this.getAttribute("pokemonName");  //sth is not right, even though I change "pokemonName" to anything, it still works.
+       this.pokemonName2= this.getAttribute("pokemonName2");
+       this.pokemonName3= this.getAttribute("pokemonName3");
+       this.pokemonName4= this.getAttribute("pokemonName4");
+       this.pokemonName5= this.getAttribute("pokemonName5");
+       this.pokemonName6= this.getAttribute("pokemonName6");
        this.pokemonImage = this.getAttribute("pokemonImage"); 
        this.pokemonId = this.getAttribute("pokemonId");
        this.pokemonType = this.getAttribute("pokemonType");
