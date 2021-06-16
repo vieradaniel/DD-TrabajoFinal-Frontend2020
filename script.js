@@ -1725,7 +1725,12 @@ pokemon1.getData().then(pokeData =>{
                                         const roundTwo = document.querySelector('.round-two').style.display="none";
                                         const roundThree = document.querySelector('.round-three').style.display="block";
                                         const healthBar= document.querySelector('.health-bar-container').style.display="none";
+                                        document.querySelector('.health-bar1').style.display="none";
                                         document.querySelector('.health-bar2').style.display="none";
+                                        document.querySelector('.health-bar3').style.display="none";
+                                        document.querySelector('.health-bar4').style.display="none";
+                                        document.querySelector('.health-bar5').style.display="none";
+                                        document.querySelector('.health-bar6').style.display="none";
 
                                     },1500);
 
@@ -1733,8 +1738,8 @@ pokemon1.getData().then(pokeData =>{
                                         document.querySelector('.round-three').style.display="none";
                                         document.querySelector('.health-bar-container').style.display="block";
                                         
-                                        //document.querySelector('.health-bar1').style.display="block";
-                                        //document.querySelector('.health-bar4').style.display="block";
+                                        document.querySelector('.health-bar1').style.display="block";
+                                        document.querySelector('.health-bar4').style.display="block";
                                     },3000);
 
                                     //I call the function of poke battle here
