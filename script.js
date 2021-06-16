@@ -75,7 +75,7 @@ pokemon1.getData().then(pokeData =>{
         e.pokemonId= "#"+ pokeData.id;
         e.pokemonType= findTheType();
         e.pokemonBackground= findTheBackground();
-        e.pokemonHp = hp1;
+        e.pokemonHp1 = hp1;
         e.pokemonCounter1 = pokeCounter1;
         e.pokemonCounter2 = pokeCounter2;
        
@@ -214,7 +214,7 @@ pokemon1.getData().then(pokeData =>{
                 e.pokemonId= "#"+ pokeData.id;
                 e.pokemonType= findTheType();
                 e.pokemonBackground= findTheBackground();
-                e.pokemonHp = hp2;
+                e.pokemonHp2 = hp2;
                 e.pokemonName2=pokeData.name.english;
                 
             })
@@ -305,8 +305,7 @@ pokemon1.getData().then(pokeData =>{
                 }
 
             
-            let hpOneCounter = hp1;
-            let hpTwoCounter = hp2;
+            
 
             // adding an event listener for the fighting button - there is one already but i couldn't add the function fight2() because of the scope I guess..?
             
@@ -354,7 +353,7 @@ pokemon1.getData().then(pokeData =>{
                     e.pokemonId= "#"+ pokeData.id;
                     e.pokemonType= findTheType();
                     e.pokemonBackground= findTheBackground();
-                    e.pokemonHp = hp3;
+                    e.pokemonHp3 = hp3;
                     e.pokemonName3=pokeData.name.english;
                     
                 })
@@ -445,8 +444,7 @@ pokemon1.getData().then(pokeData =>{
                     }
 
                 
-                let hpOneCounter = hp1;
-                let hpTwoCounter = hp2;
+                
 
                 fight3();
 
@@ -475,7 +473,7 @@ pokemon1.getData().then(pokeData =>{
                 }
 
                 // adding an event listener for the fighting button - there is one already but i couldn't add the function fight2() because of the scope I guess..?
-                
+                /*
                 fightButton3();
 
                 function fightButton3(){
@@ -578,6 +576,7 @@ pokemon1.getData().then(pokeData =>{
                     
             
                 }
+                */
 
                 //in here poke4  -- starts it is nested in poke 3
 
@@ -620,7 +619,7 @@ pokemon1.getData().then(pokeData =>{
                         e.pokemonId= "#"+ pokeData.id;
                         e.pokemonType= findTheType();
                         e.pokemonBackground= findTheBackground();
-                        e.pokemonHp = hp4;
+                        e.pokemonHp4 = hp4;
                         e.pokemonName4=pokeData.name.english;
                         
                     })
@@ -711,8 +710,7 @@ pokemon1.getData().then(pokeData =>{
                         }
     
                     
-                    let hpOneCounter = hp1;
-                    let hpTwoCounter = hp2;
+                    
     
                     fight3();
     
@@ -742,6 +740,7 @@ pokemon1.getData().then(pokeData =>{
     
                     // adding an event listener for the fighting button - there is one already but i couldn't add the function fight2() because of the scope I guess..?
                     
+                    /*
                     fightButton4();
     
                     function fightButton4(){
@@ -844,6 +843,7 @@ pokemon1.getData().then(pokeData =>{
                         
                 
                     }
+                    */
 
                     //in here poke 5 -- starts
                     const pokemon5 = new CollectPokemonInfo();
@@ -885,7 +885,7 @@ pokemon1.getData().then(pokeData =>{
                             e.pokemonId= "#"+ pokeData.id;
                             e.pokemonType= findTheType();
                             e.pokemonBackground= findTheBackground();
-                            e.pokemonHp = hp5;
+                            e.pokemonHp5 = hp5;
                             e.pokemonName5=pokeData.name.english;
                             
                         })
@@ -973,11 +973,11 @@ pokemon1.getData().then(pokeData =>{
                             
                             const route = "static/"+ result +".png";
                             return route;
-                            }
+                            
+                        }
         
                         
-                        let hpOneCounter = hp1;
-                        let hpTwoCounter = hp2;
+                        
         
                         fight5();
         
@@ -1006,7 +1006,7 @@ pokemon1.getData().then(pokeData =>{
                         }
         
                         // adding an event listener for the fighting button - there is one already but i couldn't add the function fight2() because of the scope I guess..?
-                        
+                        /*
                         fightButton4();
         
                         function fightButton4(){
@@ -1109,6 +1109,7 @@ pokemon1.getData().then(pokeData =>{
                             
                     
                         }
+                        */
 
                         //in here poke 6 -- starts
 
@@ -1151,7 +1152,7 @@ pokemon1.getData().then(pokeData =>{
                                 e.pokemonId= "#"+ pokeData.id;
                                 e.pokemonType= findTheType();
                                 e.pokemonBackground= findTheBackground();
-                                e.pokemonHp = hp6;
+                                e.pokemonHp6 = hp6;
                                 e.pokemonName6=pokeData.name.english;
                                 
                             })
@@ -1242,8 +1243,7 @@ pokemon1.getData().then(pokeData =>{
                                 }
             
                             
-                            let hpOneCounter = hp1;
-                            let hpTwoCounter = hp2;
+                           
             
                             fight6();
             
@@ -1272,7 +1272,7 @@ pokemon1.getData().then(pokeData =>{
                             }
             
                             // adding an event listener for the fighting button - there is one already but i couldn't add the function fight2() because of the scope I guess..?
-                            
+                            /*
                             fightButton6();
             
                             function fightButton6(){
@@ -1375,6 +1375,9 @@ pokemon1.getData().then(pokeData =>{
                                 
                         
                             }
+
+                            */
+
                             // I can write anything I want in here and it will work I guess xD start
                             // I will write all the logic in here
 
@@ -1382,7 +1385,12 @@ pokemon1.getData().then(pokeData =>{
 
 
                             // start of : button fight in profile stage ----------------
-                            let round = 0;
+                            let hpOneCounter = hp1;
+                            let hpTwoCounter = hp2;
+                            let hpThreeCounter = hp3;
+                            let hpFourCounter = hp4;
+                            let hpFiveCounter = hp5;
+                            let hpSixCounter = hp6;
                             
                             fightPokeOne();
 
@@ -1392,7 +1400,7 @@ pokemon1.getData().then(pokeData =>{
                                 
                                 const fight = document.querySelector('.button-fight-1');
                                 fight.addEventListener('click',()=>{
-                                    
+                                    //1st fight
                                     showPokeOneVsPokeTwo();
 
                                     const fight = document.querySelector('.next');
@@ -1403,7 +1411,8 @@ pokemon1.getData().then(pokeData =>{
                                         document.querySelector('.next').style.display="none";
                                         //hide game start stage
                                         let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
-
+                                    //2nd fight
+                                        
                                         showPokeOneVsPokeThree();
 
                                     
@@ -1447,9 +1456,14 @@ pokemon1.getData().then(pokeData =>{
                                     
                                         // poke battle logic here
                                         function fight1(){
+                                            console.log ("before the battle hp: " +hpOneCounter);
+                                            console.log ("before the battle hp: " +hpTwoCounter);
                                             
-                                            hpOneCounter = hpOneCounter-(attack2-40);
-                                            hpTwoCounter = hpTwoCounter - (attack1-30);
+                                            hpOneCounter = hpOneCounter - attack2;
+                                            hpTwoCounter = hpTwoCounter - attack1;
+                                            let totalDamageToPoke1 = 0;
+                                            totalDamageToPoke1 += attack2;
+
                                             
                                             
                                             // I pass the new value to poke hp counter 1 to innerHtml 
@@ -1457,7 +1471,7 @@ pokemon1.getData().then(pokeData =>{
                                         
                                             pokeCard1.forEach((e)=>{     
 
-                                                e.pokemonHp = hpOneCounter;                  
+                                                e.pokemonHp1 = hpOneCounter;                  
                                                 
                                             })
                                             
@@ -1467,17 +1481,17 @@ pokemon1.getData().then(pokeData =>{
                                         
                                             pokeCard2.forEach((e)=>{     
 
-                                                e.pokemonHp = hpTwoCounter;                  
+                                                e.pokemonHp2 = hpTwoCounter;                  
                                                 
                                             })
                                             
-                                            console.log (hpOneCounter);
-                                            console.log(hpTwoCounter);
+                                            console.log ("hp pokemon 1: " + hpOneCounter);
+                                            console.log("hp pokemon 2: " + hpTwoCounter);
                                             if(hpOneCounter <= 0 ){
                                                 
                                                 
                                                 clearInterval(interval);
-                                                console.log( "pokemon 2 won");
+                                                console.log( "pokemon 1 lost");
                                                 pokeCounter2 ++;
 
                                                 const pokeCounterTwo = document.querySelectorAll('round-one');                    
@@ -1494,13 +1508,17 @@ pokemon1.getData().then(pokeData =>{
                                                 document.querySelector('.health-bar-container').style.display="none";
                                                 document.querySelector('.health-bar1').style.display="none";
                                                 document.querySelector('.health-bar2').style.display="none";
+                                                console.log("hpOneCounter antes de total damage: " + hpOneCounter);
+                                                hpOneCounter+= totalDamageToPoke1;
+                                                console.log("hpOneCounter despues de total damage: " + hpOneCounter);
+
                                                 
                                                 
                                                 
 
 
 
-                                            }else if (hpTwoCounter <= 0){
+                                            } else if (hpTwoCounter <= 0){
                                                 
                                                 clearInterval(interval);
                                                 console.log("pokemon 1 before winning" + pokeCounter1);
@@ -1518,6 +1536,9 @@ pokemon1.getData().then(pokeData =>{
                                                 document.querySelector('.round-one').style.display="block";
                                                 document.querySelector('.next').style.display="flex";
                                                 document.querySelector('.health-bar-container').style.display="none";
+                                                console.log("hpOneCounter antes de total damage: " + hpOneCounter);
+                                                hpOneCounter+= totalDamageToPoke1;
+                                                console.log("hpOneCounter despues de total damage: " + hpOneCounter);
                                                
                                                 
 
@@ -1553,24 +1574,32 @@ pokemon1.getData().then(pokeData =>{
                                         const gameStart3= document.querySelector('#game-start-3').style.display="block";
                                         const roundTwo = document.querySelector('.round-two').style.display="flex";
                                         const healthBar= document.querySelector('.health-bar-container').style.display="none";
+                                        document.querySelector('.health-bar2').style.display="none";
                                     },1500);
 
                                     setTimeout(()=>{
                                         document.querySelector('.round-two').style.display="none";
                                         document.querySelector('.health-bar-container').style.display="block";
                                         document.querySelector('.health-bar1').style.display="block";
-                                            document.querySelector('.health-bar3').style.display="block";
+                                        document.querySelector('.health-bar3').style.display="block";
                                     },3000);
 
                                     //I call the function of poke battle here
 
-                                    let interval = setInterval (fight1,4000);
+                                    let interval = setInterval (fight2,4000);
                                 
                                     // poke battle logic here
-                                    function fight1(){
+                                    function fight2(){
+
+                                        console.log("battle 2 hpOneCounter (before battle)" + hpOneCounter);
+                                        console.log("battle 2 hpThreeCounter (before battle)" + hpThreeCounter);
+
                                         
-                                        hpOneCounter = hpOneCounter-(attack2-40);
-                                        hpTwoCounter = hpTwoCounter - (attack1-30);
+                                        
+                                        hpOneCounter =   hpOneCounter - attack3;
+                                        hpThreeCounter = hpThreeCounter - attack1;
+                                        let totalDamageToPoke1 = 0;
+                                        totalDamageToPoke1 += attack3;
                                         
                                         
                                         // I pass the new value to poke hp counter 1 to innerHtml 
@@ -1578,27 +1607,27 @@ pokemon1.getData().then(pokeData =>{
                                     
                                         pokeCard1.forEach((e)=>{     
 
-                                            e.pokemonHp = hpOneCounter;                  
+                                            e.pokemonHp1 = hpOneCounter;                  
                                             
                                         })
                                         
                                         
                                         
-                                        const pokeCard2 = document.querySelectorAll('.poke2');                    
+                                        const pokeCard2 = document.querySelectorAll('.poke3');                    
                                     
                                         pokeCard2.forEach((e)=>{     
 
-                                            e.pokemonHp = hpTwoCounter;                  
+                                            e.pokemonHp3 = hpThreeCounter;                  
                                             
                                         })
                                         
-                                        console.log (hpOneCounter);
-                                        console.log(hpTwoCounter);
+                                        console.log ("hp pokemon 1: " + hpOneCounter);
+                                        console.log("hp pokemon 3: " + hpThreeCounter);
                                         if(hpOneCounter <= 0 ){
                                             
                                             
                                             clearInterval(interval);
-                                            console.log( "pokemon 2 won");
+                                            console.log( "pokemon 3 won");
                                             pokeCounter2 ++;
 
                                             const pokeCounterTwo = document.querySelectorAll('round-one');                    
@@ -1608,22 +1637,25 @@ pokemon1.getData().then(pokeData =>{
                                                     e.pokemonCounter2 = pokeCounter2;                  
                                             
                                             })
+                                            console.log("pokemon 1 lost " );
 
                                             console.log("pokemon 1 after losing" + pokeCounter2);
                                             document.querySelector('.round-two').style.display="block";
                                             document.querySelector('.next').style.display="flex";
                                             document.querySelector('.health-bar-container').style.display="none";
+                                            console.log("hpOneCounter antes de total damage fight2: " + hpOneCounter);
+                                            hpOneCounter+= totalDamageToPoke1;
+                                            console.log("hpOneCounter despues de total damage fight2: " + hpOneCounter);
                                             
-                                            round +=1;
-                                            console.log(round);
+                                            
                                             
 
 
 
-                                        }else if (hpTwoCounter <= 0){
+                                        }else if (hpThreeCounter <= 0){
                                             
                                             clearInterval(interval);
-                                            console.log("pokemon 1 before winning" + pokeCounter1);
+                                            console.log("pokemon 1 won " + pokeCounter1);
                                             pokeCounter1 ++;
 
                                             const pokeCounterOne = document.querySelectorAll('round-one');                    
@@ -1639,8 +1671,7 @@ pokemon1.getData().then(pokeData =>{
                                             document.querySelector('.next').style.display="flex";
                                             document.querySelector('.health-bar-container').style.display="none";
                                            
-                                            round +=1;
-                                            console.log(round)
+                                            
 
                                             
                                             
