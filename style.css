@@ -101,6 +101,13 @@ html body{
     width:100%;
     display:none;
 }
+.round-three{
+    position:fixed;
+    top:0;
+    z-index:10;
+    width:100%;
+    display:none;
+}
 .health-bar-container{
     top:10%;
     left:45%;
@@ -116,6 +123,12 @@ html body{
 }
 
 .next{
+    display:none;
+    position:center;
+    
+    
+}
+.next3{
     display:none;
     position:center;
     

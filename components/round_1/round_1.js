@@ -147,6 +147,12 @@ class RoundOne extends HTMLElement{
     set pokemonName3(newPokeName3){
         this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName3;
     }
+    get pokemonName4(){
+        return this.shadowRoot.querySelector('.pokeName2').innerHTML;
+    }
+    set pokemonName4(newPokeName4){
+        this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName4;
+    }
 
     connectedCallback(){
         this.pokemonName=this.getAttribute("pokemonName");
@@ -154,6 +160,7 @@ class RoundOne extends HTMLElement{
         this.pokemonName2=this.getAttribute("pokemonName2");
         this.pokemonCounter2=this.getAttribute("pokeCounter2");
         this.pokemonName3=this.getAttribute("pokemonName3");
+        this.pokemonName4=this.getAttribute("pokemonName4");
     }
     
 
