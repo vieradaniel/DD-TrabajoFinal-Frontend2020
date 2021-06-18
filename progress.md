@@ -8,3 +8,8 @@
 8) that's why I'm nesting the .then in order to manipulate the info and make the fight algorithm work(that was the only idea I came up with). I'm pretty sure this is not the way it sould be done but so far it is working.(I gotta do further research on it once I'm finished)
 9) I'm pretty sure I need to improve encapsulation and the creation of functions.
 10) so far I'm using the display css property to show or hide content. 
+
+11) ok so Now I realized that settimeout() will not wait for the code to finish to go to the next one. It starts running and then the next code will continue running without waiting for the settimeout to finish... because settimeout is an asynchronous function  xD... 
+
+ ---my first approach was: use settimeout() and run this code(function1()), then after it finished, run this other code(function2()).
+ -- I'm guessing that I need some kind of flag...? research on!

@@ -1611,10 +1611,7 @@ pokemon1.getData().then(pokeData =>{
 
                                         
                                         
-                                        hpOneCounter =   hpOneCounter - attack3;
-                                        hpThreeCounter = hpThreeCounter - attack1;
-                                        let totalDamageToPoke1 = 0;
-                                        totalDamageToPoke1 += attack3;
+                                        
                                         
                                         
                                         // I pass the new value to poke hp counter 1 to innerHtml 
@@ -1636,6 +1633,15 @@ pokemon1.getData().then(pokeData =>{
                                             
                                         })
                                         
+                                            hpOneCounter =   hpOneCounter - attack3;
+                                            hpThreeCounter = hpThreeCounter - attack1;
+                                            
+                                         
+                                        
+                                       
+                                        let totalDamageToPoke1 = 0;
+                                        totalDamageToPoke1 += attack3;
+
                                         console.log ("hp pokemon 1: " + hpOneCounter);
                                         console.log("hp pokemon 3: " + hpThreeCounter);
                                         if(hpOneCounter <= 0 ){
