@@ -1,4 +1,4 @@
-
+/*
 
 let poke1 = {
     name : "pikachu",
@@ -40,7 +40,7 @@ function fight(firstPokemon,secondPokemon){
     roundNumber = 1;
 
    
-    let interval = setInterval (fight1,1000);
+    let interval = setInterval (fight1,2000);
 
     
 
@@ -80,10 +80,11 @@ function fight(firstPokemon,secondPokemon){
 async function pokemonBattle(){
     fight(poke1,poke2);
     await sleep (10000);
-    if(flag === true){
-        clearTimeout(sleep());
-    }
+    
     fight(poke1,poke3);
+    await sleep (10000);
+    fight(poke1,poke4);
+    
 
 }
 
@@ -98,18 +99,23 @@ function sleep (ms){
     });
 }
 
-let flag = false
+
 
 pokemonBattle();
      
 
 
+*/
 
 
 
+let number = 8;
+let minus= minusOne(number);
+function minusOne (number){
+   return number - 1;
+}
 
-
-
+console.log (minus);
 
 
    
