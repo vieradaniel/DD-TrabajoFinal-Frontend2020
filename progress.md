@@ -13,3 +13,5 @@
 
  ---my first approach was: use settimeout() and run this code(function1()), then after it finished, run this other code(function2()).
  -- I'm guessing that I need some kind of flag...? research on!
+
+12) well, I did research on synchrony and asynchrony, and I understood what I was doing wrong , I was able to mimic the sleep() function in python as a workaround . To figure this out, I had to understand : synchrony vs asynchrony,single threaded vs multy threaded, async-await, promise, and the typical example to understand how settimeout()/javascript works.

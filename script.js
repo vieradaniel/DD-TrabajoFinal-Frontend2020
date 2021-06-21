@@ -1304,7 +1304,9 @@ pokemon1.getData().then(pokeData =>{
                                                 
                                                 clearInterval(interval);
                                                 console.log( "pokemon 1 lost");
+                                                console.log("pokecounter2 before adding: "+ pokeCounter2);
                                                 pokeCounter2 ++;
+                                                console.log("pokecounter2 after adding: "+ pokeCounter2);
 
                                                 const pokeCounterTwo = document.querySelectorAll(`${round}`);                    
                                         
@@ -1357,8 +1359,10 @@ pokemon1.getData().then(pokeData =>{
                                             } else if (secondHpCounter <= 0){
                                                 
                                                 clearInterval(interval);
-                                                console.log("pokemon 1 before winning" + pokeCounter1);
+                                                
+                                                console.log("pokecounter1 before adding: "+ pokeCounter1);
                                                 pokeCounter1 ++;
+                                                console.log("pokecounter1 before adding: "+ pokeCounter1);
 
                                                 const pokeCounterOne = document.querySelectorAll(`${round}`);                    
                                         
