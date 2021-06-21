@@ -121,5 +121,13 @@ html body{
     
 }
 
+.win-lose1{
+    position:fixed;
+    top:0;
+    z-index:10;
+    width:100%;
+    display:none;
+}
+
 
 
