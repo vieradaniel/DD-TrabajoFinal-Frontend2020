@@ -94,20 +94,14 @@ html body{
    
     
 }
-.round-two{
+.round-two,.round-three,.round-four,.round-five{
     position:fixed;
     top:0;
     z-index:10;
     width:100%;
     display:none;
 }
-.round-three{
-    position:fixed;
-    top:0;
-    z-index:10;
-    width:100%;
-    display:none;
-}
+
 .health-bar-container{
     top:10%;
     left:45%;
@@ -118,21 +112,14 @@ html body{
     display:none;
 }
 
-.button-fight-2{
-    display:
+
+
+.next,.next3,.next4,.next5,.next6{
+    display:none;
+    position:center;
+    
+    
 }
 
-.next{
-    display:none;
-    position:center;
-    
-    
-}
-.next3{
-    display:none;
-    position:center;
-    
-    
-}
 
 

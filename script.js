@@ -983,18 +983,40 @@ pokemon1.getData().then(pokeData =>{
                             let roundOne =".round-one";
                             let roundTwo =".round-two";
                             let roundThree=".round-three";
+                            let roundFour=".round-four";
+                            let roundFive=".round-five";
 
                             let health1 = ".health-bar1";
                             let health2 = ".health-bar2";
                             let health3 = ".health-bar3";
+                            let health4 = ".health-bar4";
+                            let health5 = ".health-bar5";
+                            let health6 = ".health-bar6";
 
                             let pokeStart1 = "#game-start-1";
                             let pokeStart2 = "#game-start-2";
                             let pokeStart3 = "#game-start-3";
+                            let pokeStart4 = "#game-start-4";
+                            let pokeStart5 = "#game-start-5";
+                            let pokeStart6 = "#game-start-6";
 
                             let pokeOneClass = ".poke1";
                             let pokeTwoClass = ".poke2";
                             let pokeThreeClass = ".poke3";
+                            let pokeFourClass = ".poke4";
+                            let pokeFiveClass = ".poke5";
+                            let pokeSixClass = ".poke6";
+
+
+                            let buttonNext1 = '.button-fight-1';
+                            let buttonNext2= '.next';
+                            let buttonNext2none= '.next';
+                            let buttonNext3= '.next3';
+                            let buttonNext3none= '.next3';
+                            let buttonNext4= '.next4';
+                            let buttonNext5= '.next5';
+                            let buttonNext6= '.next6';
+
 
                             
 
@@ -1021,10 +1043,38 @@ pokemon1.getData().then(pokeData =>{
 
                             function pokeCard3funcion(pokeCard2,secondHpCounter){
                                 pokeCard2.forEach((e)=>{
-                                    console.log("fuaaa: "+ secondHpCounter);     
+                                         
 
                                     e.pokemonHp3 = secondHpCounter; 
-                                    console.log("fuaaa despues: "+ secondHpCounter);                  
+                                                     
+                                    
+                                })
+                            }
+
+                            function pokeCard4funcion(pokeCard2,secondHpCounter){
+                                pokeCard2.forEach((e)=>{
+                                         
+
+                                    e.pokemonHp4 = secondHpCounter; 
+                                                     
+                                    
+                                })
+                            }
+                            function pokeCard5funcion(pokeCard2,secondHpCounter){
+                                pokeCard2.forEach((e)=>{
+                                       
+
+                                    e.pokemonHp5 = secondHpCounter; 
+                                                      
+                                    
+                                })
+                            }
+                            function pokeCard6funcion(pokeCard2,secondHpCounter){
+                                pokeCard2.forEach((e)=>{
+                                      
+
+                                    e.pokemonHp6 = secondHpCounter; 
+                                                     
                                     
                                 })
                             }
@@ -1038,9 +1088,10 @@ pokemon1.getData().then(pokeData =>{
                                 
                                 const fight = document.querySelector('.button-fight-1');
                                 fight.addEventListener('click',()=>{
+                                    document.querySelector('.button-fight-1').style.display="none";
                                     //1st fight
-                                    let result = showPokeOneVsPokeTwo(roundOne,pokeStart1,pokeStart2,health1,health2,hpOneCounter,hpTwoCounter,attack1,attack2,pokeOneClass,pokeTwoClass,1,2);
-                                    console.log("este es result"+ result);
+                                    showPokeOneVsPokeTwo(roundOne,pokeStart1,pokeStart2,health1,health2,hpOneCounter,hpTwoCounter,attack1,attack2,pokeOneClass,pokeTwoClass,1,2,buttonNext2,buttonNext1);
+                                    
 
 
                                     const fight = document.querySelector('.next');
@@ -1056,34 +1107,78 @@ pokemon1.getData().then(pokeData =>{
                                         //2nd fight
                                         const pokeCard1 = document.querySelectorAll('.poke1'); 
                                         
-                                        showPokeOneVsPokeTwo(roundTwo,pokeStart1,pokeStart3,health1,health3,hpOneCounter,hpThreeCounter,attack1,attack3,pokeOneClass,pokeThreeClass,1,3);
+                                        showPokeOneVsPokeTwo(roundTwo,pokeStart1,pokeStart3,health1,health3,hpOneCounter,hpThreeCounter,attack1,attack3,pokeOneClass,pokeThreeClass,1,3,buttonNext3,buttonNext2);
+                                        
+                                        
+                                    
                                         
                                     
                                     
-                                    
-                                       // showPokeOneVsPokeThree();
+                                       
 
                                     
                                     })
-                                    /*
+                                    
+                                    
 
                                     
 
                                     const fight3 = document.querySelector('.next3');
                                     fight3.addEventListener('click',()=>{
                                         //hide round1
-                                        const roundOne = document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
                                         //hide .next button
                                         document.querySelector('.next3').style.display="none";
                                         //hide game start stage
                                         let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
                                         //2nd fight
                                         
-                                        showPokeOneVsPokeFour();
+                                        showPokeOneVsPokeTwo(roundThree,pokeStart1,pokeStart4,health1,health4,hpOneCounter,hpFourCounter,attack1,attack4,pokeOneClass,pokeFourClass,1,4,buttonNext4,buttonNext3);
 
                                     
                                     })
-                                    */
+
+                                    const fight4 = document.querySelector('.next4');
+                                    fight4.addEventListener('click',()=>{
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next4').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundFour,pokeStart1,pokeStart5,health1,health5,hpOneCounter,hpFiveCounter,attack1,attack5,pokeOneClass,pokeFiveClass,1,5,buttonNext5,buttonNext4);
+
+                                    
+                                    })
+                                    const fight5 = document.querySelector('.next5');
+                                    fight5.addEventListener('click',()=>{
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next5').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundFive,pokeStart1,pokeStart6,health1,health6,hpOneCounter,hpSixCounter,attack1,attack6,pokeOneClass,pokeSixClass,1,6,buttonNext6,buttonNext5);
+
+                                    
+                                    })
+                                    
                                     
                                    
                                     
@@ -1094,8 +1189,8 @@ pokemon1.getData().then(pokeData =>{
 
                                 //start of function showPokeOneVsPokeTwo ------
 
-                                async function showPokeOneVsPokeTwo(round,poke1,poke2,health1,health2,firstHpCounter,secondHpCounter,attackPoke1,attackPoke2,pokeOneClass,pokeTwoClass,numberOfCard1,numberOfCard2){
-                                    
+                                async function showPokeOneVsPokeTwo(round,poke1,poke2,health1,health2,firstHpCounter,secondHpCounter,attackPoke1,attackPoke2,pokeOneClass,pokeTwoClass,numberOfCard1,numberOfCard2,buttonNext,buttonNextNone){
+                                        document.querySelector(`${buttonNextNone}`).style.display="none";
                                         const profile= document.querySelector('.profile-stage').style.display="none";
                                         let loading = document.querySelector('.loading-stage').style.display="flex";
                                         
@@ -1163,11 +1258,17 @@ pokemon1.getData().then(pokeData =>{
                                            if(numberOfCard1 === 1){
                                                 pokeCard1funcion(pokeCard1,firstHpCounter);
                                            }else if(numberOfCard1 === 2){
-                                                pokeCard2funcion(pokeCard2,secondHpCounter);
+                                                pokeCard2funcion(pokeCard1,firstHpCounter);
 
                                            }else if(numberOfCard1 === 3){
-                                                pokeCard3funcion(pokeCard2,secondHpCounter);
-                                           }
+                                                pokeCard3funcion(pokeCard1,firstHpCounter);
+                                           }else if(numberOfCard1 === 4){
+                                               pokeCard4funcion(pokeCard1,firstHpCounter);
+                                           }else if(numberOfCard1 === 5){
+                                            pokeCard5funcion(pokeCard1,firstHpCounter);
+                                            }else if(numberOfCard1 === 6){
+                                                pokeCard6funcion(pokeCard1,firstHpCounter);
+                                            }
                                            
 
                                             
@@ -1183,12 +1284,18 @@ pokemon1.getData().then(pokeData =>{
                                             */
                                            
                                             if(numberOfCard2 === 1){
-                                                pokeCard1funcion(pokeCard1,firstHpCounter);
+                                                pokeCard1funcion(pokeCard2,secondHpCounter);
                                             }else if(numberOfCard2 === 2){
                                                 pokeCard2funcion(pokeCard2,secondHpCounter);
 
                                             }else if(numberOfCard2 === 3){
                                                 pokeCard3funcion(pokeCard2,secondHpCounter);
+                                           }else if(numberOfCard2 === 4){
+                                            pokeCard4funcion(pokeCard2,secondHpCounter);
+                                            }else if(numberOfCard2 === 5){
+                                                pokeCard5funcion(pokeCard2,secondHpCounter);
+                                            }else if(numberOfCard2 === 6){
+                                                pokeCard6funcion(pokeCard2,secondHpCounter);
                                            }
                                             
                                             
@@ -1211,7 +1318,7 @@ pokemon1.getData().then(pokeData =>{
 
                                                 console.log("pokemon 1 after losing" + pokeCounter2);
                                                 document.querySelector(`${round}`).style.display="block";
-                                                document.querySelector('.next').style.display="flex";
+                                                document.querySelector(`${buttonNext}`).style.display="flex";
                                                 document.querySelector('.health-bar-container').style.display="none";
                                                 document.querySelector(`${health1}`).style.display="none";
                                                 document.querySelector(`${health2}`).style.display="none";
@@ -1225,19 +1332,17 @@ pokemon1.getData().then(pokeData =>{
                                                 if(numberOfCard1 === 1){
                                                     pokeCard1funcion(pokeCard1,firstHpCounter);
                                                }else if(numberOfCard1 === 2){
-                                                    pokeCard2funcion(pokeCard2,secondHpCounter);
+                                                    pokeCard2funcion(pokeCard1,firstHpCounter);
     
                                                }else if(numberOfCard1 === 3){
-                                                    pokeCard3funcion(pokeCard2,secondHpCounter);
-                                               }
-                                               if(numberOfCard2 === 1){
-                                                pokeCard1funcion(pokeCard1,firstHpCounter);
-                                            }else if(numberOfCard2 === 2){
-                                                pokeCard2funcion(pokeCard2,secondHpCounter);
-
-                                            }else if(numberOfCard2 === 3){
-                                                pokeCard3funcion(pokeCard2,secondHpCounter);
-                                           }
+                                                    pokeCard3funcion(pokeCard1,firstHpCounter);
+                                               }else if(numberOfCard1 === 4){
+                                                   pokeCard4funcion(pokeCard1,firstHpCounter);
+                                               }else if(numberOfCard1 === 5){
+                                                pokeCard5funcion(pokeCard1,firstHpCounter);
+                                                }else if(numberOfCard1 === 6){
+                                                    pokeCard6funcion(pokeCard1,firstHpCounter);
+                                                }
                                                
                                                 
                                                 
@@ -1266,7 +1371,7 @@ pokemon1.getData().then(pokeData =>{
 
                                                 console.log("pokemon 1 after winning" + pokeCounter1);
                                                 document.querySelector(`${round}`).style.display="block";
-                                                document.querySelector('.next').style.display="flex";
+                                                document.querySelector(`${buttonNext}`).style.display="flex";
                                                 document.querySelector('.health-bar-container').style.display="none";
                                                 document.querySelector(`${health1}`).style.display="none";
                                                 document.querySelector(`${health2}`).style.display="none";

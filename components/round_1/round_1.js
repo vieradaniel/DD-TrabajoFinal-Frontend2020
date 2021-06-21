@@ -153,6 +153,18 @@ class RoundOne extends HTMLElement{
     set pokemonName4(newPokeName4){
         this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName4;
     }
+    get pokemonName5(){
+        return this.shadowRoot.querySelector('.pokeName2').innerHTML;
+    }
+    set pokemonName5(newPokeName5){
+        this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName5;
+    }
+    get pokemonName6(){
+        return this.shadowRoot.querySelector('.pokeName2').innerHTML;
+    }
+    set pokemonName6(newPokeName6){
+        this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName6;
+    }
 
     connectedCallback(){
         this.pokemonName=this.getAttribute("pokemonName");
@@ -161,6 +173,8 @@ class RoundOne extends HTMLElement{
         this.pokemonCounter2=this.getAttribute("pokeCounter2");
         this.pokemonName3=this.getAttribute("pokemonName3");
         this.pokemonName4=this.getAttribute("pokemonName4");
+        this.pokemonName5=this.getAttribute("pokemonName5");
+        this.pokemonName6=this.getAttribute("pokemonName6");
     }
     
 
