@@ -116,15 +116,18 @@ html body{
 
 .next,.next3,.next4,.next5,.next6{
     display:none;
-    position:center;
+    position:fixed;
+    bottom:0;
+    left:50%;
+
     
     
 }
 
-.win-lose1{
+.win-lose1,.win-lose2,.win-lose3,.win-lose4,.win-lose5,.win-lose6{
     position:fixed;
     top:0;
-    z-index:10;
+    z-index:-10;
     width:100%;
     display:none;
 }

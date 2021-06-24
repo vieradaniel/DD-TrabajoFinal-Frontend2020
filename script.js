@@ -65,7 +65,8 @@ pokemon1.getData().then(pokeData =>{
     let pokeCounter1 = 0;
     let pokeCounter2 = 0; 
      
-
+    let pokeRound=1;
+    
     
 
     pokeCard1.forEach((e)=>{
@@ -78,6 +79,7 @@ pokemon1.getData().then(pokeData =>{
         e.pokemonHp1 = hp1;
         e.pokemonCounter1 = pokeCounter1;
         e.pokemonCounter2 = pokeCounter2;
+        e.pokeRound = pokeRound;
        
         
     })
@@ -1018,6 +1020,11 @@ pokemon1.getData().then(pokeData =>{
                             let buttonNext6= '.next6';
 
                             let winLose1 = '.win-lose1';
+                            let winLose2 = '.win-lose2';
+                            let winLose3 = '.win-lose3';
+                            let winLose4 = '.win-lose4';
+                            let winLose5 = '.win-lose5';
+                            let winLose6 = '.win-lose6';
 
 
                             
@@ -1083,6 +1090,35 @@ pokemon1.getData().then(pokeData =>{
                             
                             
                             fightPokeOne();
+                            fightPokeTwo();
+
+                            function fightPokeTwo(){
+                                const fight = document.querySelector('.button-fight-2');
+                                fight.addEventListener('click',()=>{
+                                    document.querySelector('.button-fight-2').style.display="none";
+                                    showPokeOneVsPokeTwo(roundOne,pokeStart2,pokeStart1,health2,health1,hpTwoCounter,hpOneCounter,attack2,attack1,pokeTwoClass,pokeOneClass,2,1,buttonNext2,buttonNext1,winLose2);
+                                })
+
+                                const fight2 = document.querySelector('.next');
+                                fight2.addEventListener('click',()=>{
+
+                                    //hide winLose
+                                    const winLoseHide = document.querySelector('.win-lose2').style.display="none";
+                                    //hide round1
+                                    const roundOne = document.querySelector('.round-one').style.display="none";
+                                    //hide .next button
+                                    document.querySelector('.next').style.display="none";
+                                    //hide game start stage
+                                    let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                    
+                                    
+                                    showPokeOneVsPokeTwo(roundTwo,pokeStart2,pokeStart3,health2,health3,hpTwoCounter,hpThreeCounter,attack2,attack3,pokeTwoClass,pokeThreeClass,2,3,buttonNext3,buttonNext2,winLose2);
+                                });
+
+                            }
+
+
+
 
                             function fightPokeOne(){
                                 
@@ -1199,6 +1235,7 @@ pokemon1.getData().then(pokeData =>{
                                 //start of function showPokeOneVsPokeTwo ------
 
                                 async function showPokeOneVsPokeTwo(round,poke1,poke2,health1,health2,firstHpCounter,secondHpCounter,attackPoke1,attackPoke2,pokeOneClass,pokeTwoClass,numberOfCard1,numberOfCard2,buttonNext,buttonNextNone,winLose){
+                                        
                                         document.querySelector(`${buttonNextNone}`).style.display="none";
                                         const profile= document.querySelector('.profile-stage').style.display="none";
                                         let loading = document.querySelector('.loading-stage').style.display="flex";
@@ -1305,6 +1342,9 @@ pokemon1.getData().then(pokeData =>{
                                                 
                                                 
                                                 clearInterval(interval);
+                                                console.log("pokeround before "+ pokeRound);
+                                                pokeRound++;
+                                                console.log("pokeround after "+ pokeRound);
                                                 console.log( "pokemon 1 lost");
                                                 console.log("pokecounter2 before adding: "+ pokeCounter2);
                                                 pokeCounter2 ++;
@@ -1314,16 +1354,20 @@ pokemon1.getData().then(pokeData =>{
                                         
                                                     pokeCounterTwo.forEach((e)=>{     
 
-                                                        e.pokemonCounter2 = pokeCounter2;                  
+                                                        e.pokemonCounter2 = pokeCounter2;
+                                                                          
                                                 
-                                                })
+                                                    })
+                                                
                                                 const winLoseCounterTwo = document.querySelectorAll(`${winLose}`);                    
                                         
                                                     winLoseCounterTwo.forEach((e)=>{     
 
-                                                        e.pokemonCounter2 = pokeCounter2;                  
+                                                        e.pokemonCounter2 = pokeCounter2;
+                                                                          
                                                 
-                                                });
+                                                    });
+                                                
 
                                                 await sleep (5000);
 
@@ -1368,25 +1412,44 @@ pokemon1.getData().then(pokeData =>{
                                             } else if (secondHpCounter <= 0){
                                                 
                                                 clearInterval(interval);
+                                                console.log("pokeround before "+ pokeRound);
+                                                pokeRound ++;
+                                                console.log("pokeround after "+ pokeRound);
                                                 
                                                 console.log("pokecounter1 before adding: "+ pokeCounter1);
                                                 pokeCounter1 ++;
-                                                console.log("pokecounter1 before adding: "+ pokeCounter1);
+                                                console.log("pokecounter1 after adding: "+ pokeCounter1);
 
                                                 const pokeCounterOne = document.querySelectorAll(`${round}`);                    
                                         
                                                     pokeCounterOne.forEach((e)=>{     
 
-                                                        e.pokemonCounter1 = pokeCounter1;                  
+                                                        e.pokemonCounter1 = pokeCounter1;
+                                                                        
                                                 
                                                 });
+                                                /*
+
+                                                const pokeCounterOne = document.querySelectorAll(`${round}`);                    
+                                        
+                                                pokeCounterOne.forEach((e)=>{     
+
+                                                    e.pokemonCounter1 = pokeCounter1;
+                                                                    
+                                            
+                                                });
+                                                */
+                                               
+
                                                 const winLoseCounterOne = document.querySelectorAll(`${winLose}`);                    
                                         
                                                     winLoseCounterOne.forEach((e)=>{     
 
-                                                        e.pokemonCounter1 = pokeCounter1;                  
+                                                        e.pokemonCounter1 = pokeCounter1;
+                                                                          
                                                 
                                                 });
+                                                
                                                 await sleep (5000);
 
                                                 console.log("pokemon 1 after winning" + pokeCounter1);
@@ -1437,303 +1500,7 @@ pokemon1.getData().then(pokeData =>{
                                 //end of function showPokeOneVsPokeTwo ------ 
 
                                 //start of function showPokeOneVsPokeThree----
-                                /*
-
-                                async function showPokeOneVsPokeThree(){
-                                    
-                                    const profile= document.querySelector('.profile-stage').style.display="none";
-                                    let loading = document.querySelector('.loading-stage').style.display="flex";
-                                   
-                                    
-                                    setTimeout(()=>{
-                                        
-                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
-                                        loading = document.querySelector('.loading-stage').style.display="none";
-                                        const gameStart1= document.querySelector('#game-start-1').style.display="block";
-                                        const gameStart2= document.querySelector('#game-start-2').style.display="none";
-                                        const gameStart3= document.querySelector('#game-start-3').style.display="block";
-                                        const gameStart4= document.querySelector('#game-start-4').style.display="none";
-                                        const roundOne = document.querySelector('.round-one').style.display="none";
-                                        const roundTwo = document.querySelector('.round-two').style.display="block";
-                                        const roundThree = document.querySelector('.round-three').style.display="none";
-                                        const healthBar= document.querySelector('.health-bar-container').style.display="none";
-                                        document.querySelector('.health-bar1').style.display="none";
-                                        document.querySelector('.health-bar2').style.display="none";
-                                        document.querySelector('.health-bar3').style.display="none";
-                                        document.querySelector('.health-bar4').style.display="none";
-                                        document.querySelector('.health-bar5').style.display="none";
-                                        document.querySelector('.health-bar6').style.display="none";
-
-                                    },1500);
-                                    await sleep (1500);
-
-                                    setTimeout(()=>{
-                                        document.querySelector('.round-two').style.display="none";
-                                        document.querySelector('.health-bar-container').style.display="block";
-                                        
-                                        document.querySelector('.health-bar1').style.display="block";
-                                        document.querySelector('.health-bar3').style.display="block";
-                                    },3000);
-                                    await sleep (3000);
-
-                                    //I call the function of poke battle here
-
-                                    let interval = setInterval (fight2,4000);
                                 
-                                    // poke battle logic here
-                                    async function fight2(){
-                                        console.log ("before the battle hp: " +hpOneCounter);
-                                        console.log ("before the battle hp: " +hpThreeCounter);
-                                        
-                                        hpOneCounter = hpOneCounter - attack3;
-                                        hpThreeCounter = hpFourCounter - attack1;
-                                        let totalDamageToPoke1 = 0;
-                                        totalDamageToPoke1 += attack3;
-
-                                        
-                                        
-                                        // I pass the new value to poke hp counter 1 to innerHtml 
-                                        
-                                        const pokeCard1 = document.querySelectorAll('.poke1');                    
-                                    
-                                        pokeCard1.forEach((e)=>{     
-
-                                            e.pokemonHp1 = hpOneCounter;                  
-                                            
-                                        })
-                                        
-                                        
-                                        
-                                        const pokeCard3 = document.querySelectorAll('.poke3');                    
-                                    
-                                        pokeCard3.forEach((e)=>{     
-
-                                            e.pokemonHp3 = hpThreeCounter;                  
-                                            
-                                        })
-                                      
-                                        
-                                        console.log ("hp pokemon 1: " + hpOneCounter);
-                                        console.log("hp pokemon 2: " + hpThreeCounter);
-                                        if(hpOneCounter <= 0 ){
-                                            
-                                            
-                                            clearInterval(interval);
-                                            console.log( "pokemon 1 lost");
-                                            pokeCounter2 ++;
-
-                                            const pokeCounterTwo = document.querySelectorAll('round-one');                    
-                                    
-                                                pokeCounterTwo.forEach((e)=>{     
-
-                                                    e.pokemonCounter2 = pokeCounter2;                  
-                                            
-                                            })
-                                            await sleep (5000);
-
-                                            console.log("pokemon 1 after losing" + pokeCounter2);
-                                            document.querySelector('.round-two').style.display="block";
-                                            document.querySelector('.next3').style.display="flex";
-                                            document.querySelector('.health-bar-container').style.display="none";
-                                            document.querySelector('.health-bar1').style.display="none";
-                                            document.querySelector('.health-bar3').style.display="none";
-                                            console.log("hpOneCounter antes de total damage: " + hpOneCounter);
-                                            hpOneCounter+= totalDamageToPoke1;
-                                            console.log("hpOneCounter despues de total damage: " + hpOneCounter);
-
-                                            
-                                            
-                                            
-
-
-
-                                        } else if (hpThreeCounter <= 0){
-                                            
-                                            clearInterval(interval);
-                                            console.log("pokemon 1 before winning" + pokeCounter1);
-                                            pokeCounter1 ++;
-
-                                            const pokeCounterOne = document.querySelectorAll('round-one');                    
-                                    
-                                                pokeCounterOne.forEach((e)=>{     
-
-                                                    e.pokemonCounter1 = pokeCounter1;                  
-                                            
-                                            })
-                                            await sleep (5000);
-
-                                            console.log("pokemon 1 after winning" + pokeCounter1);
-                                            document.querySelector('.round-two').style.display="block";
-                                            document.querySelector('.next3').style.display="flex";
-                                            document.querySelector('.health-bar-container').style.display="none";
-                                            console.log("hpOneCounter antes de total damage: " + hpOneCounter);
-                                            hpOneCounter+= totalDamageToPoke1;
-                                            console.log("hpOneCounter despues de total damage: " + hpOneCounter);
-                                           
-                                            
-
-                                            
-                                            
-
-                                        }
-                                        
-                                    }
-
-                                    
-                                    
-                                    
-                                
-                                }  */
-
-                                //end of function showPokeOneVsPokeThree
-
-                                //start of function showPokeOneVsPokeFour
-                                /*
-                                function showPokeOneVsPokeFour(){
-                                    
-                                    const profile= document.querySelector('.profile-stage').style.display="none";
-                                    let loading = document.querySelector('.loading-stage').style.display="flex";
-                                    
-                                    
-                                    setTimeout(()=>{
-                                        
-                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
-                                        loading = document.querySelector('.loading-stage').style.display="none";
-                                        const gameStart1= document.querySelector('#game-start-1').style.display="block";
-                                        const gameStart2= document.querySelector('#game-start-2').style.display="none";
-                                        const gameStart3= document.querySelector('#game-start-3').style.display="none";
-                                        const gameStart4= document.querySelector('#game-start-4').style.display="block";
-                                        const roundOne = document.querySelector('.round-one').style.display="none";
-                                        const roundTwo = document.querySelector('.round-two').style.display="none";
-                                        const roundThree = document.querySelector('.round-three').style.display="block";
-                                        const healthBar= document.querySelector('.health-bar-container').style.display="none";
-                                        document.querySelector('.health-bar1').style.display="none";
-                                        document.querySelector('.health-bar2').style.display="none";
-                                        document.querySelector('.health-bar3').style.display="none";
-                                        document.querySelector('.health-bar4').style.display="none";
-                                        document.querySelector('.health-bar5').style.display="none";
-                                        document.querySelector('.health-bar6').style.display="none";
-
-                                    },1500);
-
-                                    setTimeout(()=>{
-                                        document.querySelector('.round-three').style.display="none";
-                                        document.querySelector('.health-bar-container').style.display="block";
-                                        
-                                        document.querySelector('.health-bar1').style.display="block";
-                                        document.querySelector('.health-bar4').style.display="block";
-                                    },3000);
-
-                                    //I call the function of poke battle here
-
-                                    let interval = setInterval (fight3,4000);
-                                
-                                    // poke battle logic here
-                                    async function fight3(){
-                                        console.log ("before the battle hp: " +hpOneCounter);
-                                        console.log ("before the battle hp: " +hpFourCounter);
-                                        
-                                        hpOneCounter = hpOneCounter - attack4;
-                                        hpFourCounter = hpFourCounter - attack1;
-                                        let totalDamageToPoke1 = 0;
-                                        totalDamageToPoke1 += attack4;
-
-                                        
-                                        
-                                        // I pass the new value to poke hp counter 1 to innerHtml 
-                                        const pokeCard1 = document.querySelectorAll('.poke1');                    
-                                    
-                                        pokeCard1.forEach((e)=>{     
-
-                                            e.pokemonHp1 = hpOneCounter;                  
-                                            
-                                        })
-                                        
-                                        
-                                        
-                                        const pokeCard4 = document.querySelectorAll('.poke4');                    
-                                    
-                                        pokeCard4.forEach((e)=>{     
-
-                                            e.pokemonHp4 = hpFourCounter;                  
-                                            
-                                        })
-                                        
-                                        console.log ("hp pokemon 1: " + hpOneCounter);
-                                        console.log("hp pokemon 2: " + hpFourCounter);
-                                        if(hpOneCounter <= 0 ){
-                                            
-                                            
-                                            clearInterval(interval);
-                                            console.log( "pokemon 1 lost");
-                                            pokeCounter2 ++;
-
-                                            const pokeCounterTwo = document.querySelectorAll('round-one');                    
-                                    
-                                                pokeCounterTwo.forEach((e)=>{     
-
-                                                    e.pokemonCounter2 = pokeCounter2;                  
-                                            
-                                            })
-                                            await sleep (5000);
-
-                                            console.log("pokemon 1 after losing" + pokeCounter2);
-                                            document.querySelector('.round-three').style.display="block";
-                                            //document.querySelector('.next4').style.display="flex";
-                                            document.querySelector('.health-bar-container').style.display="none";
-                                            document.querySelector('.health-bar1').style.display="none";
-                                            document.querySelector('.health-bar4').style.display="none";
-                                            console.log("hpOneCounter antes de total damage: " + hpOneCounter);
-                                            hpOneCounter+= totalDamageToPoke1;
-                                            console.log("hpOneCounter despues de total damage: " + hpOneCounter);
-
-                                            
-                                            
-                                            
-
-
-
-                                        } else if (hpTwoCounter <= 0){
-                                            
-                                            clearInterval(interval);
-                                            console.log("pokemon 1 before winning" + pokeCounter1);
-                                            pokeCounter1 ++;
-
-                                            const pokeCounterOne = document.querySelectorAll('round-one');                    
-                                    
-                                                pokeCounterOne.forEach((e)=>{     
-
-                                                    e.pokemonCounter1 = pokeCounter1;                  
-                                            
-                                            })
-                                            await sleep (5000);
-
-                                            console.log("pokemon 1 after winning" + pokeCounter1);
-                                            document.querySelector('.round-one').style.display="block";
-                                            document.querySelector('.next').style.display="flex";
-                                            document.querySelector('.health-bar-container').style.display="none";
-                                            console.log("hpOneCounter antes de total damage: " + hpOneCounter);
-                                            hpOneCounter+= totalDamageToPoke1;
-                                            console.log("hpOneCounter despues de total damage: " + hpOneCounter);
-                                           
-                                            
-
-                                            
-                                            
-
-                                        }
-                                        
-                                    }
-
-                                    
-                                    
-                                    
-                                
-                                } */
-                                //end of function showPokeOneVsPokeFour
-
-
-                            // end of : button fight in profile stage---
 
                             
 

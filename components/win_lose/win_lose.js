@@ -3,10 +3,14 @@ templateWinLose.innerHTML=`
 
 <style>
 .card{
+    background-color:red;
+}
+.card{
     font-family: acumin-pro-extra-condensed;
     font-weight: 700;
     font-style: italic;
-    width:100%;    
+    width:100%;
+    height:100vh    
    
     
 }
@@ -51,7 +55,7 @@ templateWinLose.innerHTML=`
 h1{
     margin:none;
 }
-.round-1{
+.win-lose{
     margin:0;
 }
 .pokenames{ 
