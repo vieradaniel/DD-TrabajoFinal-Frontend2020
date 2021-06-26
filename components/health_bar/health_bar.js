@@ -3,13 +3,27 @@ templateHealth.innerHTML=`
 
 <style>
 .card{
-    boder: 1px solid black;
+    display: flex;
+    align-items:center;
+
+}
+progress{
+    -webkit-appearance:none;
+    color:#aaa;
+    &::-webkit-progress-bar{
+        background:#f1f1f1
+    }
+    &::-webkit-progress-value {
+        background:#aaa;
+    }
+    &::-moz-progress-bar {
+        background:#aaa;
+    }
 }
 
 </style>
 <div class="card">   
-        <p class="pokeName1"></p>
-        <!-- <p class="pokeHp">100%</p> -->
+        <p class="pokeName1"></p>        
         <progress class="pokeHp" max="100" value=""></progress>
                   
 </div>

@@ -104,7 +104,7 @@ html body{
 
 .health-bar-container{
     top:10%;
-    left:45%;
+    left:25%;
     position:fixed;
     z-index:30;
 }
