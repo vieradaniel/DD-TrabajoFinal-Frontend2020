@@ -102,9 +102,9 @@ p{
         <h1 class="round-1">ROUND <span class="pokeRound"> 1</span></h1>
     </div>
     <div class="pokenames">
-        <p class="pokeName1">Pikachu</p>
+        <p class="pokeName1"></p>
         <p class="vs">vs</p>
-        <p class="pokeName2">Lapras</p>
+        <p class="pokeName2"></p>
     </div>
 </div>
 `
@@ -120,7 +120,12 @@ class RoundOne extends HTMLElement{
         return this.shadowRoot.querySelector('.pokeName1').innerHTML;
     }
     set pokemonName(newPokeName){
-        this.shadowRoot.querySelector('.pokeName1').innerHTML = newPokeName;
+        if( this.shadowRoot.querySelector('.pokeName1').innerHTML == ""){
+            this.shadowRoot.querySelector('.pokeName1').innerHTML = newPokeName;
+        }else{
+            this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName;
+        }
+        
     }
     get pokemonCounter1(){
         return this.shadowRoot.querySelector('.pokeCounter1').innerHTML;
@@ -133,7 +138,12 @@ class RoundOne extends HTMLElement{
         return this.shadowRoot.querySelector('.pokeName2').innerHTML;
     }
     set pokemonName2(newPokeName2){
-        this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName2;
+        if( this.shadowRoot.querySelector('.pokeName2').innerHTML ==""){
+            this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName2;
+        }else{
+            this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName2;
+        }
+        
     }
     get pokemonCounter2(){
         return this.shadowRoot.querySelector('.pokeCounter2').innerHTML;
@@ -145,25 +155,45 @@ class RoundOne extends HTMLElement{
         return this.shadowRoot.querySelector('.pokeName2').innerHTML;
     }
     set pokemonName3(newPokeName3){
-        this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName3;
+        if(this.shadowRoot.querySelector('.pokeName2').innerHTML == ""){
+            this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName3;
+        }else{
+            this.shadowRoot.querySelector('.pokeName1').innerHTML = newPokeName3;
+        }
+        
     }
     get pokemonName4(){
         return this.shadowRoot.querySelector('.pokeName2').innerHTML;
     }
     set pokemonName4(newPokeName4){
-        this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName4;
+        if(this.shadowRoot.querySelector('.pokeName2').innerHTML ==""){
+            this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName4;
+        }else{
+            this.shadowRoot.querySelector('.pokeName1').innerHTML = newPokeName4;
+        }
+       
     }
     get pokemonName5(){
         return this.shadowRoot.querySelector('.pokeName2').innerHTML;
     }
     set pokemonName5(newPokeName5){
-        this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName5;
+        if(this.shadowRoot.querySelector('.pokeName2').innerHTML ==""){
+            this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName5;
+        }else{
+            this.shadowRoot.querySelector('.pokeName1').innerHTML = newPokeName5;
+        }
+        
     }
     get pokemonName6(){
         return this.shadowRoot.querySelector('.pokeName2').innerHTML;
     }
     set pokemonName6(newPokeName6){
-        this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName6;
+        if(this.shadowRoot.querySelector('.pokeName2').innerHTML ==""){
+            this.shadowRoot.querySelector('.pokeName2').innerHTML = newPokeName6;
+        }else{
+            this.shadowRoot.querySelector('.pokeName1').innerHTML = newPokeName6;
+        }
+        
     }
     get pokeRound(){
         return this.shadowRoot.querySelector('.pokeRound').innerHTML;
