@@ -448,31 +448,7 @@ pokemon1.getData().then(pokeData =>{
                 
                 
 
-                fight3();
-
-                // 1st profile fight button function (I wrote two for the same button? (fight and fightbutton2))
-    
-                function fight3(){
-                    const fight3 = document.querySelector('.button-fight-3');
-                    fight3.addEventListener('click',()=>{
-                        const profile= document.querySelector('.profile-stage').style.display="none";
-                        let loading = document.querySelector('.loading-stage').style.display="flex";
-                        
-                        setTimeout(()=>{
-                            
-                            loading = document.querySelector('.loading-stage').style.display="none";
-                            gameStart1 = document.querySelector('#game-start-1').style.display="none";
-                            gameStart2 = document.querySelector('#game-start-2').style.display="none";
-                            gameStart3 = document.querySelector('#game-start-3').style.display="block";
-                            gameStart4 = document.querySelector('#game-start-4').style.display="block";
-                            let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
-                        },1500);
-    
-                        
-                        
-                        
-                    })
-                }
+               
 
        
 
@@ -610,31 +586,7 @@ pokemon1.getData().then(pokeData =>{
                     
                     
     
-                    fight3();
-    
-                    // 1st profile fight button function (I wrote two for the same button? (fight and fightbutton2))
-        
-                    function fight3(){
-                        const fight3 = document.querySelector('.button-fight-4');
-                        fight3.addEventListener('click',()=>{
-                            const profile= document.querySelector('.profile-stage').style.display="none";
-                            let loading = document.querySelector('.loading-stage').style.display="flex";
-                            
-                            setTimeout(()=>{
-                                
-                                loading = document.querySelector('.loading-stage').style.display="none";
-                                gameStart1 = document.querySelector('#game-start-1').style.display="none";
-                                gameStart2 = document.querySelector('#game-start-2').style.display="none";
-                                gameStart3 = document.querySelector('#game-start-3').style.display="block";
-                                gameStart4 = document.querySelector('#game-start-4').style.display="block";
-                                let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
-                            },1500);
-        
-                            
-                            
-                            
-                        })
-                    }
+                   
                         
 
                     //in here poke 5 -- starts
@@ -771,31 +723,7 @@ pokemon1.getData().then(pokeData =>{
                         
                         
         
-                        fight5();
-        
-                        // 1st profile fight button function (I wrote two for the same button? (fight and fightbutton2))
-            
-                        function fight5(){
-                            const fight5 = document.querySelector('.button-fight-5');
-                            fight5.addEventListener('click',()=>{
-                                const profile= document.querySelector('.profile-stage').style.display="none";
-                                let loading = document.querySelector('.loading-stage').style.display="flex";
-                                
-                                setTimeout(()=>{
-                                    
-                                    loading = document.querySelector('.loading-stage').style.display="none";
-                                    gameStart1 = document.querySelector('#game-start-1').style.display="none";
-                                    gameStart2 = document.querySelector('#game-start-2').style.display="none";
-                                    gameStart3 = document.querySelector('#game-start-3').style.display="block";
-                                    gameStart4 = document.querySelector('#game-start-4').style.display="block";
-                                    let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
-                                },1500);
-            
-                                
-                                
-                                
-                            })
-                        }  
+                        
 
                         //in here poke 6 -- starts
 
@@ -931,32 +859,7 @@ pokemon1.getData().then(pokeData =>{
                             
                            
             
-                            fight6();
-            
-                            // 1st profile fight button function (I wrote two for the same button? (fight and fightbutton2))
-                
-                            function fight6(){
-                                const fight5 = document.querySelector('.button-fight-6');
-                                fight5.addEventListener('click',()=>{
-                                    const profile= document.querySelector('.profile-stage').style.display="none";
-                                    let loading = document.querySelector('.loading-stage').style.display="flex";
-                                    
-                                    setTimeout(()=>{
-                                        
-                                        loading = document.querySelector('.loading-stage').style.display="none";
-                                        gameStart1 = document.querySelector('#game-start-1').style.display="none";
-                                        gameStart2 = document.querySelector('#game-start-2').style.display="none";
-                                        gameStart3 = document.querySelector('#game-start-3').style.display="block";
-                                        gameStart4 = document.querySelector('#game-start-4').style.display="block";
-                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
-                                    },1500);
-                
-                                    
-                                    
-                                    
-                                })
-                            }
-            
+                           
                           
 
                             
@@ -987,6 +890,7 @@ pokemon1.getData().then(pokeData =>{
                             let roundThree=".round-three";
                             let roundFour=".round-four";
                             let roundFive=".round-five";
+                            let roundOne2 = ".round-one-2";
 
                             let health1 = ".health-bar1";
                             let health2 = ".health-bar2";
@@ -1011,6 +915,11 @@ pokemon1.getData().then(pokeData =>{
 
 
                             let buttonNext1 = '.button-fight-1';
+                            let buttonNext1_2 = '.button-fight-2';
+                            let buttonNext1_3 = '.button-fight-3';
+                            let buttonNext1_4 = '.button-fight-4';
+                            let buttonNext1_5 = '.button-fight-5';
+                            let buttonNext1_6 = '.button-fight-6';
                             let buttonNext2= '.next';
                             let buttonNext2none= '.next';
                             let buttonNext3= '.next3';
@@ -1091,32 +1000,12 @@ pokemon1.getData().then(pokeData =>{
                             
                             fightPokeOne();
                             fightPokeTwo();
+                            fightPokeThree();
+                            fightPokeFour();
+                            fightPokeFive();
+                            fightPokeSix()
 
-                            function fightPokeTwo(){
-                                const fight = document.querySelector('.button-fight-2');
-                                fight.addEventListener('click',()=>{
-                                    document.querySelector('.button-fight-2').style.display="none";
-                                    showPokeOneVsPokeTwo(roundOne,pokeStart2,pokeStart1,health2,health1,hpTwoCounter,hpOneCounter,attack2,attack1,pokeTwoClass,pokeOneClass,2,1,buttonNext2,buttonNext1,winLose2);
-                                })
-
-                                const fight2 = document.querySelector('.next');
-                                fight2.addEventListener('click',()=>{
-
-                                    //hide winLose
-                                    const winLoseHide = document.querySelector('.win-lose2').style.display="none";
-                                    //hide round1
-                                    const roundOne = document.querySelector('.round-one').style.display="none";
-                                    //hide .next button
-                                    document.querySelector('.next').style.display="none";
-                                    //hide game start stage
-                                    let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
-                                    
-                                    
-                                    showPokeOneVsPokeTwo(roundTwo,pokeStart2,pokeStart3,health2,health3,hpTwoCounter,hpThreeCounter,attack2,attack3,pokeTwoClass,pokeThreeClass,2,3,buttonNext3,buttonNext2,winLose2);
-                                });
-
-                            }
-
+                            
 
 
 
@@ -1230,6 +1119,512 @@ pokemon1.getData().then(pokeData =>{
                                 })
 
                             }
+                            
+
+                            function fightPokeTwo(){
+                                const fight22 = document.querySelector('.button-fight-2');
+                                fight22.addEventListener('click',()=>{
+                                    document.querySelector('.button-fight-2').style.display="none";
+                                    showPokeOneVsPokeTwo(roundOne,pokeStart2,pokeStart1,health2,health1,hpTwoCounter,hpOneCounter,attack2,attack1,pokeTwoClass,pokeOneClass,2,1,buttonNext2,buttonNext1_2,winLose2);
+                                
+                                
+                                    const fight2 = document.querySelector('.next');
+                                    fight2.addEventListener('click',()=>{
+    
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose2').style.display="none";
+                                        //hide round1
+                                        const roundOne = document.querySelector('.round-one').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        
+                                        
+                                        showPokeOneVsPokeTwo(roundOne2,pokeStart2,pokeStart3,health2,health3,hpTwoCounter,hpThreeCounter,attack2,attack3,pokeTwoClass,pokeThreeClass,2,3,buttonNext3,buttonNext2,winLose2);
+                                    });
+    
+                                    const fight3 = document.querySelector('.next3');
+                                        fight3.addEventListener('click',()=>{
+                                            //hide winLose
+                                            const winLoseHide = document.querySelector('.win-lose2').style.display="none";
+                                            //hide round1
+                                            document.querySelector('.round-one').style.display="none";
+                                            document.querySelector('.round-two').style.display="none";
+                                            document.querySelector('.round-three').style.display="none";
+                                            document.querySelector('.round-four').style.display="none";
+                                            document.querySelector('.round-five').style.display="none";
+                                            //hide .next button
+                                            document.querySelector('.next3').style.display="none";
+                                            //hide game start stage
+                                            let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                            //2nd fight
+                                            
+                                            showPokeOneVsPokeTwo(roundThree,pokeStart2,pokeStart4,health2,health4,hpTwoCounter,hpFourCounter,attack2,attack4,pokeTwoClass,pokeFourClass,2,4,buttonNext4,buttonNext3,winLose2);
+    
+                                        
+                                        })
+    
+                                        const fight4 = document.querySelector('.next4');
+                                        fight4.addEventListener('click',()=>{
+                                            //hide winLose
+                                            const winLoseHide = document.querySelector('.win-lose2').style.display="none";
+                                            //hide round1
+                                            document.querySelector('.round-one').style.display="none";
+                                            document.querySelector('.round-two').style.display="none";
+                                            document.querySelector('.round-three').style.display="none";
+                                            document.querySelector('.round-four').style.display="none";
+                                            document.querySelector('.round-five').style.display="none";
+                                            //hide .next button
+                                            document.querySelector('.next4').style.display="none";
+                                            //hide game start stage
+                                            let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                            //2nd fight
+                                            
+                                            showPokeOneVsPokeTwo(roundFour,pokeStart2,pokeStart5,health2,health5,hpTwoCounter,hpFiveCounter,attack2,attack5,pokeTwoClass,pokeFiveClass,2,5,buttonNext5,buttonNext4,winLose2);
+    
+                                        
+                                        })
+                                        const fight5 = document.querySelector('.next5');
+                                        fight5.addEventListener('click',()=>{
+                                            //hide winLose
+                                            const winLoseHide = document.querySelector('.win-lose2').style.display="none";
+                                            //hide round1
+                                            document.querySelector('.round-one').style.display="none";
+                                            document.querySelector('.round-two').style.display="none";
+                                            document.querySelector('.round-three').style.display="none";
+                                            document.querySelector('.round-four').style.display="none";
+                                            document.querySelector('.round-five').style.display="none";
+                                            //hide .next button
+                                            document.querySelector('.next5').style.display="none";
+                                            //hide game start stage
+                                            let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                            //2nd fight
+                                            
+                                            showPokeOneVsPokeTwo(roundFive,pokeStart2,pokeStart6,health2,health6,hpTwoCounter,hpSixCounter,attack2,attack6,pokeTwoClass,pokeSixClass,2,6,buttonNext6,buttonNext5,winLose2);
+    
+                                        
+                                        })
+    
+                                
+                                
+                                })
+
+                               
+                            }
+
+                            function fightPokeThree(){
+                                
+                                
+                                
+                                const fight = document.querySelector('.button-fight-3');
+                                fight.addEventListener('click',()=>{
+                                    document.querySelector('.button-fight-3').style.display="none";
+                                    //1st fight
+                                    showPokeOneVsPokeTwo(roundTwo,pokeStart3,pokeStart1,health3,health1,hpThreeCounter,hpOneCounter,attack3,attack1,pokeThreeClass,pokeOneClass,3,1,buttonNext2,buttonNext1_2,winLose3);
+                                    
+
+
+                                    const fight = document.querySelector('.next');
+                                    fight.addEventListener('click',()=>{
+
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        const roundOne = document.querySelector('.round-one').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        const pokeCard1 = document.querySelectorAll('.poke1'); 
+                                        
+                                        showPokeOneVsPokeTwo(roundThree,pokeStart3,pokeStart2,health3,health2,hpThreeCounter,hpTwoCounter,attack3,attack2,pokeThreeClass,pokeTwoClass,3,2,buttonNext3,buttonNext2,winLose3);
+                   
+                                    })
+                                    
+                                    
+
+                                    
+
+                                    const fight3 = document.querySelector('.next3');
+                                    fight3.addEventListener('click',()=>{
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next3').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundFour,pokeStart3,pokeStart4,health3,health4,hpThreeCounter,hpFourCounter,attack3,attack4,pokeThreeClass,pokeFourClass,3,4,buttonNext4,buttonNext3,winLose3);
+
+                                    
+                                    })
+
+                                    const fight4 = document.querySelector('.next4');
+                                    fight4.addEventListener('click',()=>{
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next4').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundFour,pokeStart3,pokeStart5,health3,health5,hpThreeCounter,hpFiveCounter,attack3,attack5,pokeThreeClass,pokeFiveClass,3,5,buttonNext5,buttonNext4,winLose3);
+
+                                    
+                                    })
+                                    const fight5 = document.querySelector('.next5');
+                                    fight5.addEventListener('click',()=>{
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next5').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundFive,pokeStart3,pokeStart6,health3,health6,hpThreeCounter,hpSixCounter,attack3,attack6,pokeThreeClass,pokeSixClass,3,6,buttonNext6,buttonNext5,winLose3);
+
+                                    
+                                    })
+                                    
+                                    
+                                   
+                                    
+                                })
+
+                            }
+
+                            function fightPokeFour(){
+                                
+                                
+                                
+                                const fight = document.querySelector('.button-fight-4');
+                                fight.addEventListener('click',()=>{
+                                    document.querySelector('.button-fight-4').style.display="none";
+                                    //1st fight
+                                    showPokeOneVsPokeTwo(roundOne,pokeStart4,pokeStart1,health4,health1,hpFourCounter,hpOneCounter,attack4,attack1,pokeFourClass,pokeOneClass,4,1,buttonNext2,buttonNext1,winLose4);
+                                    
+
+
+                                    const fight = document.querySelector('.next');
+                                    fight.addEventListener('click',()=>{
+
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        const roundOne = document.querySelector('.round-one').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        const pokeCard1 = document.querySelectorAll('.poke1'); 
+                                        
+                                        showPokeOneVsPokeTwo(roundTwo,pokeStart4,pokeStart2,health4,health2,hpFourCounter,hpTwoCounter,attack4,attack2,pokeFourClass,pokeTwoClass,4,2,buttonNext3,buttonNext2,winLose4);
+                                        
+                                                                         
+                                    
+                                    })
+                                    
+                                    
+
+                                    
+
+                                    const fight3 = document.querySelector('.next3');
+                                    fight3.addEventListener('click',()=>{
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next3').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundThree,pokeStart4,pokeStart3,health4,health3,hpFourCounter,hpThreeCounter,attack4,attack3,pokeFourClass,pokeThreeClass,4,3,buttonNext4,buttonNext3,winLose4);
+
+                                    
+                                    })
+
+                                    const fight4 = document.querySelector('.next4');
+                                    fight4.addEventListener('click',()=>{
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next4').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundFour,pokeStart4,pokeStart5,health4,health5,hpFourCounter,hpFiveCounter,attack4,attack5,pokeFourClass,pokeFiveClass,4,5,buttonNext5,buttonNext4,winLose4);
+
+                                    
+                                    })
+                                    const fight5 = document.querySelector('.next5');
+                                    fight5.addEventListener('click',()=>{
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next5').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundFive,pokeStart4,pokeStart6,health4,health6,hpFourCounter,hpSixCounter,attack4,attack6,pokeFourClass,pokeSixClass,4,6,buttonNext6,buttonNext5,winLose4);
+
+                                    
+                                    })
+                                    
+                                    
+                                   
+                                    
+                                })
+
+                            }
+
+
+                            function fightPokeFive(){
+                                
+                                
+                                
+                                const fight = document.querySelector('.button-fight-5');
+                                fight.addEventListener('click',()=>{
+                                    document.querySelector('.button-fight-5').style.display="none";
+                                    //1st fight
+                                    showPokeOneVsPokeTwo(roundOne,pokeStart5,pokeStart1,health5,health1,hpFiveCounter,hpOneCounter,attack5,attack1,pokeFiveClass,pokeOneClass,5,1,buttonNext2,buttonNext1,winLose5);
+                                    
+
+
+                                    const fight = document.querySelector('.next');
+                                    fight.addEventListener('click',()=>{
+
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        const roundOne = document.querySelector('.round-one').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        const pokeCard1 = document.querySelectorAll('.poke1'); 
+                                        
+                                        showPokeOneVsPokeTwo(roundTwo,pokeStart5,pokeStart2,health5,health2,hpFiveCounter,hpTwoCounter,attack5,attack2,pokeFiveClass,pokeTwoClass,5,1,buttonNext3,buttonNext2,winLose5);
+                                      
+                                    
+                                    })
+                                    
+
+                                    const fight3 = document.querySelector('.next3');
+                                    fight3.addEventListener('click',()=>{
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next3').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundThree,pokeStart5,pokeStart3,health5,health3,hpFiveCounter,hpThreeCounter,attack5,attack3,pokeFiveClass,pokeThreeClass,5,3,buttonNext4,buttonNext3,winLose5);
+
+                                    
+                                    })
+
+                                    const fight4 = document.querySelector('.next4');
+                                    fight4.addEventListener('click',()=>{
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next4').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundFour,pokeStart5,pokeStart4,health5,health4,hpFiveCounter,hpFourCounter,attack5,attack4,pokeFiveClass,pokeFourClass,5,4,buttonNext5,buttonNext4,winLose5);
+
+                                    
+                                    })
+                                    const fight5 = document.querySelector('.next5');
+                                    fight5.addEventListener('click',()=>{
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next5').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundFive,pokeStart5,pokeStart6,health5,health6,hpFiveCounter,hpSixCounter,attack5,attack6,pokeFiveClass,pokeSixClass,5,6,buttonNext6,buttonNext5,winLose5);
+
+                                    
+                                    })
+                                    
+                                    
+                                   
+                                    
+                                })
+
+                            }
+
+                            function fightPokeSix(){
+                                
+                                
+                                
+                                const fight = document.querySelector('.button-fight-6');
+                                fight.addEventListener('click',()=>{
+                                    document.querySelector('.button-fight-6').style.display="none";
+                                    //1st fight
+                                    showPokeOneVsPokeTwo(roundOne,pokeStart6,pokeStart1,health6,health1,hpSixCounter,hpOneCounter,attack6,attack1,pokeSixClass,pokeOneClass,6,1,buttonNext2,buttonNext1,winLose6);
+                                    
+
+
+                                    const fight = document.querySelector('.next');
+                                    fight.addEventListener('click',()=>{
+
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        const roundOne = document.querySelector('.round-one').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        const pokeCard1 = document.querySelectorAll('.poke1'); 
+                                        
+                                        showPokeOneVsPokeTwo(roundTwo,pokeStart6,pokeStart2,health6,health2,hpSixCounter,hpTwoCounter,attack6,attack2,pokeSixClass,pokeTwoClass,6,2,buttonNext3,buttonNext2,winLose6);
+                                     
+                                    
+                                    })
+                                    
+                               
+                                    const fight3 = document.querySelector('.next3');
+                                    fight3.addEventListener('click',()=>{
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next3').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundThree,pokeStart6,pokeStart3,health6,health3,hpSixCounter,hpThreeCounter,attack6,attack3,pokeSixClass,pokeThreeClass,6,3,buttonNext4,buttonNext3,winLose6);
+
+                                    
+                                    })
+
+                                    const fight4 = document.querySelector('.next4');
+                                    fight4.addEventListener('click',()=>{
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next4').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundFour,pokeStart6,pokeStart4,health6,health4,hpSixCounter,hpFourCounter,attack6,attack4,pokeSixClass,pokeFourClass,6,4,buttonNext5,buttonNext4,winLose6);
+
+                                    
+                                    })
+                                    const fight5 = document.querySelector('.next5');
+                                    fight5.addEventListener('click',()=>{
+                                        //hide winLose
+                                        const winLoseHide = document.querySelector('.win-lose1').style.display="none";
+                                        //hide round1
+                                        document.querySelector('.round-one').style.display="none";
+                                        document.querySelector('.round-two').style.display="none";
+                                        document.querySelector('.round-three').style.display="none";
+                                        document.querySelector('.round-four').style.display="none";
+                                        document.querySelector('.round-five').style.display="none";
+                                        //hide .next button
+                                        document.querySelector('.next5').style.display="none";
+                                        //hide game start stage
+                                        let gameStartStage= document.querySelector('.game-start-stage').style.display="none";
+                                        //2nd fight
+                                        
+                                        showPokeOneVsPokeTwo(roundFive,pokeStart6,pokeStart5,health6,health5,hpSixCounter,hpFiveCounter,attack6,attack5,pokeSixClass,pokeFiveClass,6,5,buttonNext6,buttonNext5,winLose6);
+
+                                    
+                                    })
+                                    
+                                    
+                                   
+                                    
+                                })
+
+                            }
+
+
                            
 
                                 //start of function showPokeOneVsPokeTwo ------
