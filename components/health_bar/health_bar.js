@@ -9,7 +9,8 @@ templateHealth.innerHTML=`
 </style>
 <div class="card">   
         <p class="pokeName1"></p>
-        <p class="pokeHp">100%</p>
+        <!-- <p class="pokeHp">100%</p> -->
+        <progress class="pokeHp" max="100" value=""></progress>
                   
 </div>
 `
@@ -61,37 +62,37 @@ class HealthBar extends HTMLElement{
         return this.shadowRoot.querySelector('.pokeHp').innerHTML;
     }
     set pokemonHp1(newPokeHp1){
-        this.shadowRoot.querySelector('.pokeHp').innerHTML = newPokeHp1;
+        this.shadowRoot.querySelector('.pokeHp').setAttribute("value",newPokeHp1);
     }
     get pokemonHp2(){
         return this.shadowRoot.querySelector('.pokeHp').innerHTML;
     }
     set pokemonHp2(newPokeHp2){
-        this.shadowRoot.querySelector('.pokeHp').innerHTML = newPokeHp2;
+        this.shadowRoot.querySelector('.pokeHp').setAttribute("value",newPokeHp2);
     }
     get pokemonHp3(){
         return this.shadowRoot.querySelector('.pokeHp').innerHTML;
     }
     set pokemonHp3(newPokeHp3){
-        this.shadowRoot.querySelector('.pokeHp').innerHTML = newPokeHp3;
+        this.shadowRoot.querySelector('.pokeHp').setAttribute("value",newPokeHp3);
     }
     get pokemonHp4(){
         return this.shadowRoot.querySelector('.pokeHp').innerHTML;
     }
     set pokemonHp4(newPokeHp4){
-        this.shadowRoot.querySelector('.pokeHp').innerHTML = newPokeHp4;
+        this.shadowRoot.querySelector('.pokeHp').setAttribute("value",newPokeHp4);
     }
     get pokemonHp5(){
         return this.shadowRoot.querySelector('.pokeHp').innerHTML;
     }
     set pokemonHp5(newPokeHp5){
-        this.shadowRoot.querySelector('.pokeHp').innerHTML = newPokeHp5;
+        this.shadowRoot.querySelector('.pokeHp').setAttribute("value",newPokeHp5);
     }
     get pokemonHp6(){
         return this.shadowRoot.querySelector('.pokeHp').innerHTML;
     }
     set pokemonHp6(newPokeHp6){
-        this.shadowRoot.querySelector('.pokeHp').innerHTML = newPokeHp6;
+        this.shadowRoot.querySelector('.pokeHp').setAttribute("value",newPokeHp6);
     }
 
     connectedCallback(){
