@@ -1652,8 +1652,11 @@ pokemon1.getData().then(pokeData =>{
                             }
 
 
-                           
+                            
 
+
+                           
+                                // THIS ONE IS THE MIGHTY FUNCTION!!!!!!!!!!-----------------------------------------(how not to make a function, it doesn't align with the good practices ,look at all those parameters...)
                                 //start of function showPokeOneVsPokeTwo ------
 
                                 async function showPokeOneVsPokeTwo(round,poke1,poke2,health1,health2,firstHpCounter,secondHpCounter,attackPoke1,attackPoke2,pokeOneClass,pokeTwoClass,numberOfCard1,numberOfCard2,buttonNext,buttonNextNone,winLose){
@@ -1670,6 +1673,8 @@ pokemon1.getData().then(pokeData =>{
                                                 pokeCounterOne1.forEach((e)=>{     
 
                                                     e.pokeRound = pokeRound;
+                                                    e.pokemonCounter2 = pokeCounter2;
+                                                    e.pokemonCounter1 = pokeCounter1;
                                                    
                                                     
                                                                     
