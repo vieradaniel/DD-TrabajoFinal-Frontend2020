@@ -1665,6 +1665,17 @@ pokemon1.getData().then(pokeData =>{
                                         
                                         setTimeout(()=>{
                                             
+                                            const pokeCounterOne1 = document.querySelectorAll(`${round}`);                    
+                                        
+                                                pokeCounterOne1.forEach((e)=>{     
+
+                                                    e.pokeRound = pokeRound;
+                                                   
+                                                    
+                                                                    
+                                            
+                                                });
+                                            
                                             let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
                                             loading = document.querySelector('.loading-stage').style.display="none";
                                             const gameStart1= document.querySelector(`${poke1}`).style.display="block";
@@ -1688,6 +1699,7 @@ pokemon1.getData().then(pokeData =>{
                                     
                                         // poke battle logic here
                                         async function fight1(){
+                                            
                                             console.log ("before the battle hp poke 1: " +`${firstHpCounter}`);
                                             console.log ("before the battle hp poke 2: " +`${secondHpCounter}`);
                                             
@@ -1777,6 +1789,7 @@ pokemon1.getData().then(pokeData =>{
                                                     pokeCounterTwo.forEach((e)=>{     
 
                                                         e.pokemonCounter2 = pokeCounter2;
+                                                        
                                                                           
                                                 
                                                     })
@@ -1852,11 +1865,11 @@ pokemon1.getData().then(pokeData =>{
                                                 });
                                                 /*
 
-                                                const pokeCounterOne = document.querySelectorAll(`${round}`);                    
+                                                const pokeCounterOne1 = document.querySelectorAll(`${round}`);                    
                                         
-                                                pokeCounterOne.forEach((e)=>{     
+                                                pokeCounterOne1.forEach((e)=>{     
 
-                                                    e.pokemonCounter1 = pokeCounter1;
+                                                    e.pokeRound = pokeRound;
                                                                     
                                             
                                                 });

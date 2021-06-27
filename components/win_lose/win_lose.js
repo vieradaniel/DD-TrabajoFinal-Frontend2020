@@ -140,6 +140,7 @@ class WinLose extends HTMLElement{
     }
     set pokemonCounter1(newPokeCounter1){
         this.shadowRoot.querySelector('.pokeCounter1').innerHTML = newPokeCounter1;
+        this.shadowRoot.querySelector('.win-lose').innerHTML = "WON";
     }
 
     get pokemonName2(){
@@ -153,6 +154,7 @@ class WinLose extends HTMLElement{
     }
     set pokemonCounter2(newPokeCounter2){
         this.shadowRoot.querySelector('.pokeCounter2').innerHTML = newPokeCounter2;
+        this.shadowRoot.querySelector('.win-lose').innerHTML = "LOST";
     }
     get pokemonName3(){
         return this.shadowRoot.querySelector('.pokeName1').innerHTML;

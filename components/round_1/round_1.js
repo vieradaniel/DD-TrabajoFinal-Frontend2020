@@ -99,7 +99,7 @@ p{
     </div>
 
     <div class="round-one-container">
-        <h1 class="round-1">ROUND <span class="pokeRound"> 1</span></h1>
+        <h1 class="round-1">ROUND <span class="pokeRound"> </span></h1>
     </div>
     <div class="pokenames">
         <p class="pokeName1"></p>
