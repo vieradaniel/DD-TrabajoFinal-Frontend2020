@@ -6,6 +6,7 @@ templateWinLose.innerHTML=`
     background-color:red;
 }
 .card{
+    padding-top:2rem;
     font-family: acumin-pro-extra-condensed;
     font-weight: 700;
     font-style: italic;
@@ -42,21 +43,24 @@ templateWinLose.innerHTML=`
     margin:0;
     padding:0 0.3rem;
     font-size: 1.5rem;
-    margin: 0 0.5rem;
+    margin: 0 0.2rem;
     
 }
 .round-one-container{
     background:#FFF;
-    padding:1rem;
+    
     display:flex;
     justify-content:center;
     font-size: 2rem;
+    margin: 0 5rem;
+    margin-bottom: 1rem;
 }
 h1{
     margin:none;
 }
 .win-lose{
     margin:0;
+    
 }
 .pokenames{ 
     display:flex;
@@ -74,7 +78,7 @@ p{
     padding:0.1rem;
 }
 .pokeName1{
-    margin-right:4rem;
+    margin-right:12rem;
 }
 .pokeName2{
     margin-left:3rem;
@@ -83,6 +87,9 @@ p{
     background:#FFF;
     font-size:1rem;
     padding:0.1rem;
+}
+#pokePicture{
+    width: 20rem;
 }
 
 </style>
@@ -139,7 +146,7 @@ class WinLose extends HTMLElement{
         return this.shadowRoot.querySelector('.pokeCounter1').innerHTML;
     }
     set pokemonCounter1(newPokeCounter1){
-        this.shadowRoot.querySelector('.pokeCounter1').innerHTML = newPokeCounter1;
+        this.shadowRoot.querySelector('.pokeCounter1').innerHTML = "0"+ newPokeCounter1;
         this.shadowRoot.querySelector('.win-lose').innerHTML = "WON";
     }
 
@@ -153,7 +160,7 @@ class WinLose extends HTMLElement{
         return this.shadowRoot.querySelector('.pokeCounter2').innerHTML;
     }
     set pokemonCounter2(newPokeCounter2){
-        this.shadowRoot.querySelector('.pokeCounter2').innerHTML = newPokeCounter2;
+        this.shadowRoot.querySelector('.pokeCounter2').innerHTML = "0"+ newPokeCounter2;
         this.shadowRoot.querySelector('.win-lose').innerHTML = "LOST";
     }
     get pokemonName3(){
