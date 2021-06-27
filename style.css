@@ -104,9 +104,10 @@ html body{
 
 .health-bar-container{
     top:10%;
-    left:25%;
+    left:20%;
     position:fixed;
     z-index:30;
+    font-family: acumin-pro-extra-condensed;
 }
 .health-bar1,.health-bar2,.health-bar3,.health-bar4,.health-bar5,.health-bar6{
     display:none;

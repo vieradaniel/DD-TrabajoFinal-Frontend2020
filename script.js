@@ -146,20 +146,23 @@ pokemon1.getData().then(pokeData =>{
 //start ------- click on a card in "select your pokemon" and it will display its profile--------------------
     const card= document.querySelector('.poke1');
     card.addEventListener('click',()=>{
-        const profile = document.querySelector('.profile-stage').style.display= "block";
-        const cards = document.querySelector('.character-selection').style.display="none";
-        
-        const buttonFight2 = document.querySelector('.button-fight-2').style.display="none";
-        const buttonFight3 = document.querySelector('.button-fight-3').style.display="none";
-        const buttonFight4 = document.querySelector('.button-fight-4').style.display="none";
-        const buttonFight5 = document.querySelector('.button-fight-5').style.display="none";
-        const buttonFight6 = document.querySelector('.button-fight-6').style.display="none";
-
-        const pokeProfile2 = document.querySelector('#profile2').style.display="none";
-        const pokeProfile3 = document.querySelector('#profile3').style.display="none";
-        const pokeProfile4 = document.querySelector('#profile4').style.display="none";
-        const pokeProfile5 = document.querySelector('#profile5').style.display="none";
-        const pokeProfile6 = document.querySelector('#profile6').style.display="none";
+        setTimeout(function(){
+            const profile = document.querySelector('.profile-stage').style.display= "block";
+            const cards = document.querySelector('.character-selection').style.display="none";
+            
+            const buttonFight2 = document.querySelector('.button-fight-2').style.display="none";
+            const buttonFight3 = document.querySelector('.button-fight-3').style.display="none";
+            const buttonFight4 = document.querySelector('.button-fight-4').style.display="none";
+            const buttonFight5 = document.querySelector('.button-fight-5').style.display="none";
+            const buttonFight6 = document.querySelector('.button-fight-6').style.display="none";
+    
+            const pokeProfile2 = document.querySelector('#profile2').style.display="none";
+            const pokeProfile3 = document.querySelector('#profile3').style.display="none";
+            const pokeProfile4 = document.querySelector('#profile4').style.display="none";
+            const pokeProfile5 = document.querySelector('#profile5').style.display="none";
+            const pokeProfile6 = document.querySelector('#profile6').style.display="none";
+        },150)
+       
         
                
         

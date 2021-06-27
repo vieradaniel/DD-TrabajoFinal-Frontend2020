@@ -7,6 +7,14 @@ templateHealth.innerHTML=`
     align-items:center;
 
 }
+.pokeName1{
+    border:1px solid black;
+    color: white;
+    background:black;
+    font-size:1.5rem;
+    padding:0.2rem;
+    
+}
 progress{
     -webkit-appearance:none;
     color:#aaa;
@@ -19,6 +27,8 @@ progress{
     &::-moz-progress-bar {
         background:#aaa;
     }
+    width:4rem;
+    height:2rem;
 }
 
 </style>
