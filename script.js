@@ -161,7 +161,7 @@ pokemon1.getData().then(pokeData =>{
             const pokeProfile4 = document.querySelector('#profile4').style.display="none";
             const pokeProfile5 = document.querySelector('#profile5').style.display="none";
             const pokeProfile6 = document.querySelector('#profile6').style.display="none";
-        },150)
+        },200)
        
         
                
