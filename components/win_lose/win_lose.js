@@ -3,7 +3,7 @@ templateWinLose.innerHTML=`
 
 <style>
 .card{
-    background-color:red;
+    background: linear-gradient(180deg, #E5E5E5 0%, #FFFFFF 100%);
 }
 .card{
     padding-top:2rem;
