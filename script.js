@@ -23,9 +23,29 @@ class CollectPokemonInfo{
     }
 }
 
+class CollectPokemonGif{
+    getData(){
+        return fetch('https://pokeapi.co/api/v2/pokemon/25')
+        .then((data) =>{
+            return data.json();
+        })
+        .then((json)=>{
 
+          
 
+            return json;
 
+        });
+    }
+}
+/*
+const gif = new CollectPokemonGif();
+gif.getData().then(pokeData=>{
+    let gif = pokeData.sprites.front_default;
+    console.log(gif);
+})
+
+*/
 
 //POKEMON 1--------------------------------------------------------------------
 const pokemon1 = new CollectPokemonInfo();
@@ -72,6 +92,14 @@ pokemon1.getData().then(pokeData =>{
     pokeCard1.forEach((e)=>{
         
         e.pokemonName= pokeData.name.english;// does it mean that I can access the function get pokemonName? from outside of the component?
+        e.pokeNameJapanese = pokeData.name.japanese;
+        e.pokeNameChinese = pokeData.name.chinese;
+        e.pokeNameFrench=pokeData.name.french;
+        e.pokeHpInfo= hp1;
+        e.pokeAttackInfo = attack1;
+        e.pokeDefenseInfo = defense1 ;
+        e.pokeSpeciesInfo = pokeData.species;
+        e.pokeDescriptionInfo = pokeData.description;
         e.pokemonImage= pokeData.thumbnail;
         e.pokemonId= "#"+ pokeData.id;
         e.pokemonType= findTheType();
@@ -80,6 +108,7 @@ pokemon1.getData().then(pokeData =>{
         e.pokemonCounter1 = pokeCounter1;
         e.pokemonCounter2 = pokeCounter2;
         e.pokeRound = pokeRound;
+        
        
         
     })
@@ -214,7 +243,14 @@ pokemon1.getData().then(pokeData =>{
             
 
             pokeCard2.forEach((e)=>{
-                
+                e.pokeNameJapanese = pokeData.name.japanese;
+                e.pokeNameChinese = pokeData.name.chinese;
+                e.pokeNameFrench=pokeData.name.french;
+                e.pokeHpInfo= hp2;
+                e.pokeAttackInfo =  attack2;
+                e.pokeDefenseInfo = defense2;
+                e.pokeSpeciesInfo = pokeData.species;
+                e.pokeDescriptionInfo = pokeData.description;
                 e.pokemonImage= pokeData.thumbnail;
                 e.pokemonId= "#"+ pokeData.id;
                 e.pokemonType= findTheType();
@@ -360,6 +396,14 @@ pokemon1.getData().then(pokeData =>{
                     e.pokemonBackground= findTheBackground();
                     e.pokemonHp3 = hp3;
                     e.pokemonName3=pokeData.name.english;
+                    e.pokeNameJapanese = pokeData.name.japanese;
+                    e.pokeNameChinese = pokeData.name.chinese;
+                    e.pokeNameFrench=pokeData.name.french;
+                    e.pokeHpInfo= hp3;
+                    e.pokeAttackInfo = attack3;
+                    e.pokeDefenseInfo = defense3;
+                    e.pokeSpeciesInfo = pokeData.species;
+                    e.pokeDescriptionInfo = pokeData.description;
                     
                 })
             
@@ -498,6 +542,14 @@ pokemon1.getData().then(pokeData =>{
                         e.pokemonBackground= findTheBackground();
                         e.pokemonHp4 = hp4;
                         e.pokemonName4=pokeData.name.english;
+                        e.pokeNameJapanese = pokeData.name.japanese;
+                        e.pokeNameChinese = pokeData.name.chinese;
+                        e.pokeNameFrench=pokeData.name.french;
+                        e.pokeHpInfo= hp4;
+                        e.pokeAttackInfo = attack4;
+                        e.pokeDefenseInfo = defense4;
+                        e.pokeSpeciesInfo = pokeData.species;
+                        e.pokeDescriptionInfo = pokeData.description;
                         
                     })
                 
@@ -634,6 +686,14 @@ pokemon1.getData().then(pokeData =>{
                             e.pokemonBackground= findTheBackground();
                             e.pokemonHp5 = hp5;
                             e.pokemonName5=pokeData.name.english;
+                            e.pokeNameJapanese = pokeData.name.japanese;
+                            e.pokeNameChinese = pokeData.name.chinese;
+                            e.pokeNameFrench=pokeData.name.french;
+                            e.pokeHpInfo= hp5;
+                            e.pokeAttackInfo = attack5;
+                            e.pokeDefenseInfo = defense5;
+                            e.pokeSpeciesInfo = pokeData.species;
+                            e.pokeDescriptionInfo = pokeData.description;
                             
                         })
                     
@@ -771,6 +831,14 @@ pokemon1.getData().then(pokeData =>{
                                 e.pokemonBackground= findTheBackground();
                                 e.pokemonHp6 = hp6;
                                 e.pokemonName6=pokeData.name.english;
+                                e.pokeNameJapanese = pokeData.name.japanese;
+                                e.pokeNameChinese = pokeData.name.chinese;
+                                e.pokeNameFrench=pokeData.name.french;
+                                e.pokeHpInfo= hp6;
+                                e.pokeAttackInfo = attack6;
+                                e.pokeDefenseInfo = defense6;
+                                e.pokeSpeciesInfo = pokeData.species;
+                                e.pokeDescriptionInfo = pokeData.description;
                                 
                             })
                         
