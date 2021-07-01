@@ -48,17 +48,18 @@ templateProfile.innerHTML=`
         width:150px;
         display:flex;
         justify-content:flex-end;
-        margin-top:-8rem;
+        
         margin-right:2rem;
         position:fixed;
-        bottom:50vh;
+        bottom:55vh;
         right:1rem;
         z-index:100;
         
     }
     .profile-bottom{
         background: #fff;        
-        padding:1.5rem;
+        padding:3.5rem 1.5rem 1.5rem 1.5rem;
+        
         
         border-radius:20px 20px 0 0;
         position:fixed;
@@ -125,13 +126,14 @@ templateProfile.innerHTML=`
                 <p class="description-2"></p>
             </div>
         </div>
+        <!--
         <div class"info-2">
         info2
         </div>
         <div class= "info-3">
         info3
         </div>
-
+        -->
     </div>
     
 

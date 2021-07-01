@@ -1,3 +1,20 @@
+
+fetch('https://pokemon-last-standing-api.vercel.app/results/?limit=10&pokemon=25')
+.then((data) =>{
+    return data.json();
+})
+.then((json)=>{
+
+    let answer = console.log(json);
+
+    return answer;
+
+});
+
+
+
+
+
 /*
 
 let poke1 = {
@@ -107,7 +124,7 @@ pokemonBattle();
 
 */
 
-
+/*
 
 let number = 8;
 let minus= minusOne(number);
@@ -117,7 +134,7 @@ function minusOne (number){
 
 console.log (minus);
 
-
+*/
    
 
 
