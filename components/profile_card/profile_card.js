@@ -51,7 +51,7 @@ templateProfile.innerHTML=`
         
         margin-right:2rem;
         position:fixed;
-        bottom:55vh;
+        bottom:50vh;
         right:1rem;
         z-index:100;
         
@@ -64,7 +64,7 @@ templateProfile.innerHTML=`
         border-radius:20px 20px 0 0;
         position:fixed;
         bottom:0;
-        height:50vh;
+        height:45vh;
         width: 87%;
         z-index:; 
         
