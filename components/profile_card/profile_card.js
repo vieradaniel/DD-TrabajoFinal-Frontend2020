@@ -64,7 +64,7 @@ templateProfile.innerHTML=`
         border-radius:20px 20px 0 0;
         position:fixed;
         bottom:0;
-        height:60vh;
+        height:30vh;
         width: 87%;
         z-index:; 
         
