@@ -64,7 +64,7 @@ templateProfile.innerHTML=`
         border-radius:20px 20px 0 0;
         position:fixed;
         bottom:0;
-        height:30vh;
+        height:40vh;
         width: 87%;
         z-index:; 
         
@@ -108,7 +108,7 @@ templateProfile.innerHTML=`
             <p>Win Ratio</p>
             <h1>52%</h1>            
         </div>
-        <div class="X-button">X</div>        
+        <div class="X-button"></div>        
     </div>
 
     <div class="poke-picture">
@@ -255,7 +255,9 @@ class ProfileCard extends HTMLElement{
        this.pokeDescriptionInfo = this.getAttribute("pokeDescriptionInfo");
        //console.log(this.shadowRoot.querySelector('.poke-card-container').style.background="red");
        
-       const button = document.querySelector('.bottom-button');
+     
+
+       
        
        /*
        button.addEventListener('click',()=>{

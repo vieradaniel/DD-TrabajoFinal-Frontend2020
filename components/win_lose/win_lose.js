@@ -146,6 +146,9 @@ class WinLose extends HTMLElement{
         return this.shadowRoot.querySelector('.pokeCounter1').innerHTML;
     }
     set pokemonCounter1(newPokeCounter1){
+        if(newPokeCounter1== null){
+            newPokeCounter1 = "0";
+        }
         this.shadowRoot.querySelector('.pokeCounter1').innerHTML = "0"+ newPokeCounter1;
         this.shadowRoot.querySelector('.win-lose').innerHTML = "WON";
     }
@@ -160,6 +163,9 @@ class WinLose extends HTMLElement{
         return this.shadowRoot.querySelector('.pokeCounter2').innerHTML;
     }
     set pokemonCounter2(newPokeCounter2){
+        if(newPokeCounter2 == null){
+            newPokeCounter2 = "0";
+        }
         this.shadowRoot.querySelector('.pokeCounter2').innerHTML = "0"+ newPokeCounter2;
         this.shadowRoot.querySelector('.win-lose').innerHTML = "LOST";
     }

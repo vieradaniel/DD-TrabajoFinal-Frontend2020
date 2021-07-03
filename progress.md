@@ -15,3 +15,5 @@
  -- I'm guessing that I need some kind of flag...? research on!
 
 12) well, I did research on synchrony and asynchrony, and I understood what I was doing wrong , I was able to mimic the sleep() function in python as a workaround . To figure this out, I had to understand : synchrony vs asynchrony,single threaded vs multy threaded, async-await, promise, and the typical example to understand how settimeout()/javascript works.
+
+13) Jum, I realized that I used a lot of query selectors and I didn't pass them to a variable. It looks like it would have been more efficient if I had done so. for example: let example = document.querySelector("example"); then I would just use example.

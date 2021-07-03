@@ -4,6 +4,16 @@ setTimeout(()=>{
     let characterSelection = document.querySelector('.character-selection').style.display="block"
 },1500);
 
+let closeButton= document.querySelector('.close-button');
+let profileStage = document.querySelector('.profile-stage');
+let characterSelection = document.querySelector('.character-selection');
+
+closeButton.addEventListener('click',()=>{
+    profileStage.style.display="none";
+    characterSelection.style.display="block";
+    
+})
+
 
 
 
@@ -179,12 +189,14 @@ pokemon1.getData().then(pokeData =>{
             const profile = document.querySelector('.profile-stage').style.display= "block";
             const cards = document.querySelector('.character-selection').style.display="none";
             
+            const buttonFight1 = document.querySelector('.button-fight-1').style.display="block";
             const buttonFight2 = document.querySelector('.button-fight-2').style.display="none";
             const buttonFight3 = document.querySelector('.button-fight-3').style.display="none";
             const buttonFight4 = document.querySelector('.button-fight-4').style.display="none";
             const buttonFight5 = document.querySelector('.button-fight-5').style.display="none";
             const buttonFight6 = document.querySelector('.button-fight-6').style.display="none";
     
+            const pokeProfile1 = document.querySelector('#profile1').style.display="block";
             const pokeProfile2 = document.querySelector('#profile2').style.display="none";
             const pokeProfile3 = document.querySelector('#profile3').style.display="none";
             const pokeProfile4 = document.querySelector('#profile4').style.display="none";
@@ -273,12 +285,14 @@ pokemon1.getData().then(pokeData =>{
 
 
                 const buttonFight1 = document.querySelector('.button-fight-1').style.display="none";
+                const buttonFight2 = document.querySelector('.button-fight-2').style.display="block";
                 const buttonFight3 = document.querySelector('.button-fight-3').style.display="none";
                 const buttonFight4 = document.querySelector('.button-fight-4').style.display="none";
                 const buttonFight5 = document.querySelector('.button-fight-5').style.display="none";
                 const buttonFight6 = document.querySelector('.button-fight-6').style.display="none";
 
                 const pokeProfile1 = document.querySelector('#profile1').style.display="none";
+                const pokeProfile2 = document.querySelector('#profile2').style.display="block";
                 const pokeProfile3 = document.querySelector('#profile3').style.display="none";
                 const pokeProfile4 = document.querySelector('#profile4').style.display="none";
                 const pokeProfile5 = document.querySelector('#profile5').style.display="none";
@@ -420,12 +434,14 @@ pokemon1.getData().then(pokeData =>{
                     
                     const buttonFight1 = document.querySelector('.button-fight-1').style.display="none";
                     const buttonFight2 = document.querySelector('.button-fight-2').style.display="none";
+                    const buttonFight3 = document.querySelector('.button-fight-3').style.display="block";
                     const buttonFight4 = document.querySelector('.button-fight-4').style.display="none";
                     const buttonFight5 = document.querySelector('.button-fight-5').style.display="none";
                     const buttonFight6 = document.querySelector('.button-fight-6').style.display="none";
 
                     const pokeProfile1 = document.querySelector('#profile1').style.display="none";
                     const pokeProfile2 = document.querySelector('#profile2').style.display="none";
+                    const pokeProfile3 = document.querySelector('#profile3').style.display="block";
                     const pokeProfile4 = document.querySelector('#profile4').style.display="none";
                     const pokeProfile5 = document.querySelector('#profile5').style.display="none";
                     const pokeProfile6 = document.querySelector('#profile6').style.display="none";
@@ -567,12 +583,14 @@ pokemon1.getData().then(pokeData =>{
                         const buttonFight1 = document.querySelector('.button-fight-1').style.display="none";
                         const buttonFight2 = document.querySelector('.button-fight-2').style.display="none";
                         const buttonFight3 = document.querySelector('.button-fight-3').style.display="none";
+                        const buttonFight4 = document.querySelector('.button-fight-4').style.display="block";
                         const buttonFight5 = document.querySelector('.button-fight-5').style.display="none";
                         const buttonFight6 = document.querySelector('.button-fight-6').style.display="none";
 
                         const pokeProfile1 = document.querySelector('#profile1').style.display="none";
                         const pokeProfile2 = document.querySelector('#profile2').style.display="none";
                         const pokeProfile3 = document.querySelector('#profile3').style.display="none";
+                        const pokeProfile4 = document.querySelector('#profile4').style.display="block";
                         const pokeProfile5 = document.querySelector('#profile5').style.display="none";
                         const pokeProfile6 = document.querySelector('#profile6').style.display="none";
                         
@@ -712,12 +730,14 @@ pokemon1.getData().then(pokeData =>{
                             const buttonFight2 = document.querySelector('.button-fight-2').style.display="none";
                             const buttonFight3 = document.querySelector('.button-fight-3').style.display="none";
                             const buttonFight4 = document.querySelector('.button-fight-4').style.display="none";
+                            const buttonFight5 = document.querySelector('.button-fight-5').style.display="block";
                             const buttonFight6 = document.querySelector('.button-fight-6').style.display="none";
 
                             const pokeProfile1 = document.querySelector('#profile1').style.display="none";
                             const pokeProfile2 = document.querySelector('#profile2').style.display="none";
                             const pokeProfile3 = document.querySelector('#profile3').style.display="none";
                             const pokeProfile4 = document.querySelector('#profile4').style.display="none";
+                            const pokeProfile5 = document.querySelector('#profile5').style.display="block";
                             const pokeProfile6 = document.querySelector('#profile6').style.display="none";
                             
                         });
@@ -858,12 +878,14 @@ pokemon1.getData().then(pokeData =>{
                                 const buttonFight3 = document.querySelector('.button-fight-3').style.display="none";
                                 const buttonFight4 = document.querySelector('.button-fight-4').style.display="none";
                                 const buttonFight5 = document.querySelector('.button-fight-5').style.display="none";
+                                const buttonFight6 = document.querySelector('.button-fight-6').style.display="block";
 
                                 const pokeProfile1 = document.querySelector('#profile1').style.display="none";
                                 const pokeProfile2 = document.querySelector('#profile2').style.display="none";
                                 const pokeProfile3 = document.querySelector('#profile3').style.display="none";
                                 const pokeProfile4 = document.querySelector('#profile4').style.display="none";
                                 const pokeProfile5 = document.querySelector('#profile5').style.display="none";
+                                const pokeProfile6 = document.querySelector('#profile6').style.display="block";
                                 
                             });
                             

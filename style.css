@@ -55,6 +55,11 @@ html body{
     margin-bottom:1rem;
     
 }
+.close-button{
+    position:fixed;
+    top:1rem;
+    right:1rem;
+}
 
 
 .profile-stage{
