@@ -4,15 +4,29 @@ setTimeout(()=>{
     let characterSelection = document.querySelector('.character-selection').style.display="block"
 },1500);
 
+
+// close button functionality
 let closeButton= document.querySelector('.close-button');
 let profileStage = document.querySelector('.profile-stage');
 let characterSelection = document.querySelector('.character-selection');
+let resultsStage = document.querySelector('.results');
 
 closeButton.addEventListener('click',()=>{
     profileStage.style.display="none";
     characterSelection.style.display="block";
     
 })
+// end close button functionality
+
+let buttonSix = document.querySelector('.next6');
+
+buttonSix.addEventListener('click',()=>{
+    document.querySelector('.game-start-stage').style.display="none";
+    resultsStage.style.display="block";
+
+})
+
+
 
 
 
@@ -93,9 +107,15 @@ pokemon1.getData().then(pokeData =>{
     }
 
     let pokeCounter1 = 0;
-    let pokeCounter2 = 0; 
+    let pokeCounter2 = 0;
+    let win= 0;
+    let lose= 0;
+    let results = win-lose;
+    
+   
      
     let pokeRound=1;
+    
     
     
 
@@ -117,7 +137,10 @@ pokemon1.getData().then(pokeData =>{
         e.pokemonHp1 = hp1;
         e.pokemonCounter1 = pokeCounter1;
         e.pokemonCounter2 = pokeCounter2;
+        e.total = pokeRound;
         e.pokeRound = pokeRound;
+        e.results = results;
+        
         
        
         
@@ -1873,6 +1896,8 @@ pokemon1.getData().then(pokeData =>{
                                                 clearInterval(interval);
                                                 console.log("pokeround before "+ pokeRound);
                                                 pokeRound++;
+                                                lose++;
+                                                console.log("lose : "+ lose);
                                                 console.log("pokeround after "+ pokeRound);
                                                 console.log( "pokemon 1 lost");
                                                 console.log("pokecounter2 before adding: "+ pokeCounter2);
@@ -1891,8 +1916,9 @@ pokemon1.getData().then(pokeData =>{
                                                 
                                                 const winLoseCounterTwo = document.querySelectorAll(`${winLose}`);                    
                                         
-                                                    winLoseCounterTwo.forEach((e)=>{     
-
+                                                    winLoseCounterTwo.forEach((e)=>{
+                                                           
+                                                        e.total = pokeRound; 
                                                         e.pokemonCounter2 = pokeCounter2;
                                                                           
                                                 
@@ -1944,6 +1970,8 @@ pokemon1.getData().then(pokeData =>{
                                                 clearInterval(interval);
                                                 console.log("pokeround before "+ pokeRound);
                                                 pokeRound ++;
+                                                win++;
+                                                console.log("win: "+ win);
                                                 console.log("pokeround after "+ pokeRound);
                                                 
                                                 console.log("pokecounter1 before adding: "+ pokeCounter1);
@@ -1973,7 +2001,8 @@ pokemon1.getData().then(pokeData =>{
 
                                                 const winLoseCounterOne = document.querySelectorAll(`${winLose}`);                    
                                         
-                                                    winLoseCounterOne.forEach((e)=>{     
+                                                    winLoseCounterOne.forEach((e)=>{
+                                                        e.total = pokeRound;     
 
                                                         e.pokemonCounter1 = pokeCounter1;
                                                                           

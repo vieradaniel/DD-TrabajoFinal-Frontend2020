@@ -91,6 +91,13 @@ p{
 #pokePicture{
     width: 20rem;
 }
+.total{
+    margin-top: -1.5rem;
+}
+.thisRound{
+    display:flex;
+    align-items:flex-end;
+}
 
 </style>
 
@@ -99,13 +106,17 @@ p{
     
     <div class="pokenames">
         <p class="pokeName1">Pikachu</p>
+        <span class="total">0/5</span>
+        
         
         
     </div>
 
     <div class="round-one-container">
-        <h1 class="win-lose">WON/LOST</h1>
+        <h1 class="win-lose">WON/LOST </h1> 
+        <p class="thisRound">this round</p>      
     </div>
+   
 
     
     
@@ -199,6 +210,14 @@ class WinLose extends HTMLElement{
     set pokemonImage(newPokeImage){
         this.shadowRoot.querySelector('#pokePicture').src = newPokeImage;
     }
+    get total(){
+        return this.shadowRoot.querySelector('.total').innerHTML;
+    }
+    set total(newTotal){
+        this.shadowRoot.querySelector('.total').innerHTML = (newTotal - 1) + "/5";
+       
+        
+    }
 
     connectedCallback(){
         this.pokemonName=this.getAttribute("pokemonName");
@@ -210,6 +229,9 @@ class WinLose extends HTMLElement{
         this.pokemonName5=this.getAttribute("pokemonName5");
         this.pokemonName6=this.getAttribute("pokemonName6");
         this.pokemonImage = this.getAttribute("pokemonImage");
+        this.total=this.getAttribute("total") ;
+        
+        
     }
     
 
