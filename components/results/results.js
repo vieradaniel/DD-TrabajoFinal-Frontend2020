@@ -105,7 +105,7 @@ templateResults.innerHTML=`
         <div class= "info-1">
             <div class="">
                 <p class="label-1">RESULTS</p>
-                <p class="description-1 results">0</p>
+                <p class="description-1 results">sin datos</p>
             </div>
             <div class="description">
                 <p class="label-2">Description</p>
@@ -184,14 +184,18 @@ class Results extends HTMLElement{
         this.shadowRoot.querySelector('.profile-card-container').style.background = newPokeBackground;
     }
     get results(){
-        return this.shadowRoot.querySelector('.pokemon-name').innerHTML;
+        return this.shadowRoot.querySelector('.results').innerHTML;
     }
     set results(newResults){
-        if(newResults > 0){
+        if(newResults>0){
             this.shadowRoot.querySelector('.results').innerHTML = "YOU WON";
         }else{
             this.shadowRoot.querySelector('.results').innerHTML = "YOU LOST";
         }
+            
+        
+            
+        
         
     }
   
@@ -208,6 +212,7 @@ class Results extends HTMLElement{
        this.pokemonType = this.getAttribute("pokemonType");
        this.pokemonBackground = this.getAttribute("pokemonBackground");
        this.results = this.getAttribute("results");
+       
                       
        
        

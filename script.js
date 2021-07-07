@@ -110,7 +110,7 @@ pokemon1.getData().then(pokeData =>{
     let pokeCounter2 = 0;
     let win= 0;
     let lose= 0;
-    let results = win-lose;
+    let results = 0;
     
    
      
@@ -1794,6 +1794,16 @@ pokemon1.getData().then(pokeData =>{
                                             
                                                 });
                                             
+                                            const resultsCard = document.querySelectorAll("results-card");
+                                            resultsCard.forEach((e)=>{     
+
+                                                e.results = results;
+                                                
+                                                                                      
+                                                                
+                                        
+                                            });    
+                                            
                                             let gameStartStage= document.querySelector('.game-start-stage').style.display="flex"
                                             loading = document.querySelector('.loading-stage').style.display="none";
                                             const gameStart1= document.querySelector(`${poke1}`).style.display="block";
@@ -1897,6 +1907,9 @@ pokemon1.getData().then(pokeData =>{
                                                 console.log("pokeround before "+ pokeRound);
                                                 pokeRound++;
                                                 lose++;
+                                                results -= 1;
+                                                
+                                                console.log("results: " +results);
                                                 console.log("lose : "+ lose);
                                                 console.log("pokeround after "+ pokeRound);
                                                 console.log( "pokemon 1 lost");
@@ -1971,6 +1984,8 @@ pokemon1.getData().then(pokeData =>{
                                                 console.log("pokeround before "+ pokeRound);
                                                 pokeRound ++;
                                                 win++;
+                                                results += 1;
+                                                console.log("results: "+ results)
                                                 console.log("win: "+ win);
                                                 console.log("pokeround after "+ pokeRound);
                                                 
