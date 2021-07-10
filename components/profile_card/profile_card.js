@@ -105,8 +105,10 @@ templateProfile.innerHTML=`
                     <img src="static/flags/icon-flag-france.png"><span class="pokemon-french">nombre1</span><img>
                 </div>
             </div>
+            <!--
             <p>Win Ratio</p>
-            <h1>52%</h1>            
+            <h1>52%</h1>   
+            -->         
         </div>
         <div class="X-button"></div>        
     </div>

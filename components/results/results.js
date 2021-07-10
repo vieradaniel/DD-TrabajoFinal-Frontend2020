@@ -51,20 +51,18 @@ templateResults.innerHTML=`
         
         margin-right:2rem;
         position:fixed;
-        bottom:45vh;
-        right:1rem;
+        bottom:60vh;
+        right:10vh;
         z-index:100;
         
     }
     .profile-bottom{
         background: #fff;        
-        padding:3.5rem 1.5rem 1.5rem 1.5rem;
-        
-        
+        padding:3.5rem 1.5rem 1.5rem 1.5rem;           
         border-radius:20px 20px 0 0;
         position:fixed;
         bottom:0;
-        height:40vh;
+        height:50vh;
         width: 87%;
         z-index:; 
         
@@ -75,15 +73,30 @@ templateResults.innerHTML=`
     }
     .description{
         display:flex;
+        margin-top: 1rem;
        
     }
     .description-1{
+        
         padding-left:40px;
     }
     .description-2{
         padding-left:20px;
     }
-   
+   .info-1{
+       display:flex;
+       justify-content:center;
+       flex-direction:column;
+       align-items:center;
+   }
+   .button-try-again{
+       margin-top:3rem;
+       padding:0.5rem;
+       background-color: #20bf55;
+       background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+
+
+   }
 
     
 
@@ -104,13 +117,14 @@ templateResults.innerHTML=`
     <div class="profile-bottom">        
         <div class= "info-1">
             <div class="">
-                <p class="label-1">RESULTS</p>
+                <p class="label-1">RESULT</p>
                 <p class="description-1 results">sin datos</p>
             </div>
             <div class="description">
-                <p class="label-2">Description</p>
+                <p class="label-2">Thank you for playing!</p>
                 <p class="description-2"></p>
             </div>
+            <button class="button-try-again">TRY AGAIN</button>
         </div>
         <!--
         <div class"info-2">
@@ -194,10 +208,15 @@ class Results extends HTMLElement{
         }
             
         
-            
+        let button = this.shadowRoot.querySelector('.button-try-again');
+        button.addEventListener('click',()=>{
+        location.reload();
+        })    
         
         
     }
+
+    
   
 
     connectedCallback(){
@@ -218,6 +237,8 @@ class Results extends HTMLElement{
        
        
     }
+
+    
 
 
 }
