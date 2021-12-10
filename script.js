@@ -30,11 +30,14 @@ buttonSix.addEventListener('click',()=>{
 */
 
 
+   
+
+
 
 
 class CollectPokemonInfo{
     getData(){
-        return fetch('https://app.pokemon-api.xyz/pokemon/random')
+        return fetch('./server.json')
         .then((data) =>{
             return data.json();
         })
